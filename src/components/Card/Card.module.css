@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap');
+
+.card{
+    width: 100%;
+    max-width: 370.35px;
+    border-radius: 15px;
+    overflow: hidden;
+    height: 315px;
+}
+
+.card__top{
+    height: 145px;
+    overflow: hidden;
+}
+
+.card__img{
+    object-fit: contain;
+    width: 100%;
+    overflow: hidden;
+}
+
+.card__bottom{
+    padding: 24px 31px 32px 31px;
+    background: #011221;
+}
+
+.card__bottom p {
+    margin: 0;
+    margin-bottom: 23px;
+    font-family: 'Fira Code';
+    font-size: 18px;
+    color: #607B96;
+}
