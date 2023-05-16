@@ -30,5 +30,5 @@ export const PageHello = () => {
             <footer>Футер</footer>
         </div>
     </section>
-  )
-}
+  );
+};
