@@ -5,17 +5,20 @@ import s from './Button.module.css'
 export const Button = (props) => {
     const {
         className,
+        children,
         primary,
         ghost,
       } = props;
     
-    const innerClassName = clsx(s.button, className, {
+    //s.button - дефолтный класс кнопки
+    const innerClassName = clsx(s.button, className, { 
+        //дополнительные классы кнопки
         [s.button__primary]: primary,
         [s.button__ghost]: ghost,
     });
 
 
   return (
-        <button className={innerClassName}>start-game</button>
+        <button className={innerClassName}>{children}</button>
   )
 }
