@@ -1,11 +1,12 @@
-import '../App.css';
-import { PageHello } from '../components/PageHello/PageHello';
-
+import "./Global.css";
+import { PageHello } from "../components/PageHello/PageHello";
 
 function App() {
   return (
-    <PageHello/>
-  )
+    <>
+      <PageHello />
+    </>
+  );
 }
 
 export default App;
