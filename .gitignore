@@ -4,6 +4,10 @@
 /node_modules
 /.pnp
 .pnp.js
+/.vscode
+/.idea
+./src/app/App.jsx
+./src/App.js
 
 # testing
 /coverage

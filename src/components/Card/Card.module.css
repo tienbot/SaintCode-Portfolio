@@ -10,18 +10,19 @@
 
 .card__top{
     height: 145px;
-    overflow: hidden;
+    position: relative;
 }
 
 .card__img{
-    object-fit: contain;
+    object-fit: cover;
     width: 100%;
-    overflow: hidden;
+    height: 100%;
 }
 
 .card__bottom{
     padding: 24px 31px 32px 31px;
     background: #011221;
+    height: 100%;
 }
 
 .card__bottom p {
