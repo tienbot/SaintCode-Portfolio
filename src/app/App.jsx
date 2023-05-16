@@ -1,11 +1,14 @@
-import '../App.css';
-import { PageHello } from '../components/PageHello/PageHello';
-
+import "../App.css";
+import { PageHello } from "../components/PageHello/PageHello";
+import Footer from "../components/Footer/Footer";
 
 function App() {
   return (
-    <PageHello/>
-  )
+    <>
+      {/* <PageHello /> */}
+      <Footer />
+    </>
+  );
 }
 
 export default App;
