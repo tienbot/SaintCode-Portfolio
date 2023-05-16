@@ -1,0 +1,22 @@
+.checkbox 
+    display: inline-block
+    position: relative
+    cursor: pointer
+.check 
+    opacity: 0
+    position: absolute
+    top: 0
+    left: 0
+    height: 0
+    width: 0
+.checkmark 
+    display: inline-block
+    height: 16px
+    width: 17px
+    background-image: url('./StartImg/Vector(2).png')
+    background-size: cover
+    transition: background-image 0.3s
+
+.check:checked ~ .checkmark 
+    background-image: url('./StartImg/Vector(1).png')
+
