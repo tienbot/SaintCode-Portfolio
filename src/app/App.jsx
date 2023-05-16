@@ -3,9 +3,9 @@ import { PageHello } from '../components/PageHello/PageHello';
 
 
 function App() {
-  return (
+  return  <>
     <PageHello/>
-  )
+  </>
 }
 
 export default App;
