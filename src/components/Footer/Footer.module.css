@@ -1,23 +1,22 @@
 .footer {
   display: flex;
   justify-content: flex-start;
-  margin: 0 70px 70px 70px;
-  background-color: #1e2d3d;
-  border: 1px solid #607b96;
+  /* background-color: #1e2d3d; */
+  border-top: 1px solid #607b96;
   border-radius: 0 0 8px 8px;
 }
 .find {
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 146px;
   height: 52px;
-  text-indent: 36px;
   font-family: "Fira Code", sans-serif;
   font-style: normal;
   font-weight: 450;
   font-size: 16px;
   line-height: 21px;
-  background-color: #1e2d3d;
+  /* background-color: #1e2d3d; */
   color: #607b96;
   border-radius: 0 0 0 8px;
   border-right: 1px solid #607b96;
@@ -29,7 +28,7 @@
   width: 50px;
   height: 52px;
   /* margin-right: auto; */
-  background-color: #1e2d3d;
+  /* background-color: #1e2d3d; */
   color: #607b96;
   border-left: 1px solid #607b96;
   border-right: 1px solid #607b96;
@@ -41,7 +40,7 @@
   width: 50px;
   height: 52px;
 
-  background-color: #1e2d3d;
+  /* background-color: #1e2d3d; */
   color: #607b96;
   border-right: 1px solid #607b96;
 }
@@ -60,6 +59,6 @@
   font-weight: 450;
   font-size: 16px;
   line-height: 21px;
-  background-color: #1e2d3d;
+  /* background-color: #1e2d3d; */
   color: #607b96;
 }
