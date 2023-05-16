@@ -1,7 +1,7 @@
-import "./Global.css";
+import React from "react";
 
-function App() {
+const App = () => {
   return <></>;
-}
+};
 
 export default App;
