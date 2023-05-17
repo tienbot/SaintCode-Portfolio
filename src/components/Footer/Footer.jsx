@@ -2,7 +2,7 @@ import style from "./Footer.module.css";
 import git from "./git_logo.svg";
 import instagram from "./instagram_logo.svg";
 import facebook from "./facebook_logo.svg";
-import Media from "../Media/Media.jsx";
+import Media from "../../ui/Media/Media.jsx";
 
 const Footer = () => {
   return (
