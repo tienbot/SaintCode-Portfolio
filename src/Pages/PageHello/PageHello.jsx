@@ -23,6 +23,7 @@ export const PageHello = () => {
             <div className={s.game__wrapper}></div>
         </div>
         {/* <img className={s.game__blur} src={blur} alt="" /> */}
+        <div className={s.blurGreen}></div>
     </main>
     );
 };
