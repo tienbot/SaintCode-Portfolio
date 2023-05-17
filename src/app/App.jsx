@@ -9,8 +9,8 @@ function App() {
   return (
     <Layout>
       <Header/>
-      {/* <PageHello/> */}
-      <About />
+      <PageHello/>
+      {/* <About /> */}
       <Footer />
     </Layout>
   );
