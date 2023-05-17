@@ -3,6 +3,8 @@ import { Layout } from "../Layout/Layout";
 import Footer from '../components/Footer/Footer'
 import { PageHello } from '../Pages/PageHello/PageHello'
 
+
+
 function App() {
   return (
     <Layout>
@@ -10,6 +12,7 @@ function App() {
         <PageHello/>
         <Footer/>
     </Layout>
+   
   )
 }
 
