@@ -4,6 +4,8 @@ import boltUpLeft from './assets/bolt-up-left.svg'
 import boltUpRight from './assets/bolt-up-right.svg'
 import boltDownLeft from './assets/bolt-down-left.svg'
 import boltDownRight from './assets/bolt-down-right.svg'
+import arrow from './assets/arrow.svg'
+import foodItem from './assets/foodItem.svg'
 import {Button} from '../../components/Button/Button'
 
 export const PageHello = () => {
@@ -29,10 +31,46 @@ export const PageHello = () => {
                     <Button children='start game' primary/>
                 </div>
                 <div className={s.game__components}>
-                    <div className={s.game__control}>
-                        <p className={s.white}>&#47;&#47; use keyboard</p>
-                        <p className={s.white}>&#47;&#47; arrows to play</p>
+                    <div className={s.game__comtent}>
+                        <div className={s.game__control}>
+                            <p className={s.white}>&#47;&#47; use keyboard</p>
+                            <p className={s.white}>&#47;&#47; arrows to play</p>
+                            <div className={s.buttonsControl}>
+                                <div className={s.buttonsControl__top}>
+                                    <button className={s.btnControl}>
+                                        <img src={arrow} alt="" />
+                                    </button>
+                                </div>
+                                <div className={s.buttonsControl__bottom}>
+                                    <button className={s.btnControl}>
+                                        <img className={s.btnControl_left} src={arrow} alt="" />
+                                    </button>
+                                    <button className={s.btnControl}>
+                                    <img className={s.btnControl_down} src={arrow} alt="" />
+                                    </button>
+                                    <button className={s.btnControl}>
+                                    <img className={s.btnControl_right} src={arrow} alt="" />
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div className={s.game__food}>
+                            <p className={s.white}>&#47;&#47; food left</p>
+                            <div className={s.food__wrapper}>
+                                <img className={s.food__active} src={foodItem} alt="" />
+                                <img className={s.food__active} src={foodItem} alt="" />
+                                <img className={s.food__active} src={foodItem} alt="" />
+                                <img className={s.food__active} src={foodItem} alt="" />
+                                <img className={s.food__active} src={foodItem} alt="" />
+                                <img className={s.food__active} src={foodItem} alt="" />
+                                <img className={s.food__active} src={foodItem} alt="" />
+                                <img src={foodItem} alt="" />
+                                <img src={foodItem} alt="" />
+                                <img src={foodItem} alt="" />
+                            </div>
+                        </div>
                     </div>
+                    <Button children='skip' ghost/>
                 </div>
 
                 <img className={s.bolt__UpLeft} src={boltUpLeft} alt="" />
