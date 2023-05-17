@@ -5,6 +5,8 @@ import Footer from "../components/Footer/Footer";
 import { PageHello } from "../Pages/PageHello/PageHello";
 import About from "../Pages/About/About";
 
+
+
 function App() {
   return (
     <Layout>
@@ -13,7 +15,7 @@ function App() {
       {/* <About /> */}
       <Footer />
     </Layout>
-  );
+  )
 }
 
 export default App;
