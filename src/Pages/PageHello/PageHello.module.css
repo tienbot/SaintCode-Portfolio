@@ -1,26 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap');
-
-.pageHello{
-    background: #010C15;
-    height: 100vh;
-    width: 100vw;
-    padding: 54px;
-    font-family: 'Fira Code';
-}
-
-.pageHello__wrapper{
-    max-width: 1782px;
-    max-height: 941.32px;
-    width: 100%;
-    height: 100%;
-    border: 1px solid #1E2D3D;
-    border-radius: 8px;
-    background: #011627;
-    margin: 15px;
-    display: flex;
-    flex-direction: column;
-}
-
 main {
     padding: 27px;
     display: flex;
