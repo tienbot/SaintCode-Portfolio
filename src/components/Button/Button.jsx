@@ -17,7 +17,6 @@ export const Button = (props) => {
         [s.button__ghost]: ghost,
     });
 
-
   return (
         <button className={innerClassName}>{children}</button>
   )
