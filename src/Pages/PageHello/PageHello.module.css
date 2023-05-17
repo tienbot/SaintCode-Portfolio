@@ -1,33 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap');
-
-.pageHello{
-    background: #010C15;
-    height: 100vh;
-    width: 100vw;
-    padding: 54px;
-    font-family: 'Fira Code';
-}
-
-.pageHello__wrapper{
-    max-width: 1782px;
-    max-height: 941.32px;
-    width: 100%;
-    height: 100%;
-    border: 1px solid #1E2D3D;
-    border-radius: 8px;
-    background: #011627;
-    margin: 15px;
-}
-
 main {
+    padding: 27px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     height: 100%;
+    max-width: 1157px;
+    width: 100%;
+    margin: 0 auto;
 }
 
-.pageHello__text_top{
-    margin-bottom: 81px;
+.pageHello__text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 304px;
 }
 
 .pageHello__textSuptext{
@@ -53,15 +39,12 @@ h1{
     text-shadow: 0px 0 1px rgba(0, 0, 0, 0.25);
 }
 
-.pageHello__text_bottom{
-
-}
-
-p{
+.pageHello__text_bottom p{
     font-weight: 450;
     font-size: 16px;
     line-height: 21px;
     color: #607B96;
+    margin-bottom: 9.6px;
 }
 
 a {
@@ -72,14 +55,46 @@ a {
     text-decoration: none;
 }
 
+.pageHello__game{
+    position: relative;
+    max-height: 475px;
+    height: 100%;
+    max-width: 510px;
+    width: 100%;
+}
+
 .game__wrapper{
-    width: 510px;
-    height: 475px;
+    max-width: 510px;
+    width: 100%;
+    max-height: 475px;
+    height: 100%;
     background: linear-gradient(150.26deg, rgba(23, 85, 83, 0.7) 1.7%, rgba(67, 217, 173, 0.091) 81.82%);
     border: 1px solid #0C1616;
     box-shadow: inset 0px 2px 0px rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(32px);
     border-radius: 8px;
+}
+
+.game__blur{
+    position: absolute;
+    
+    top: 50%;
+    height: 80%;
+    width: 80%;
+    left: 50%;
+	transform: translateX(-25%) translateY(-50%);
+}
+
+.white{
+    color: #FFFFFF;
+}
+
+.green{
+    color: #43D9AD;
+}
+
+.blue{
+    color: #4D5BCE;
 }
 
 header,footer{
