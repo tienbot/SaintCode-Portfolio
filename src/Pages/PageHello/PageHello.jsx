@@ -1,6 +1,9 @@
 import React from 'react'
 import s from './PageHello.module.css'
-import blur from './assets/Background Blurs.png'
+import boltUpLeft from './assets/bolt-up-left.svg'
+import boltUpRight from './assets/bolt-up-right.svg'
+import boltDownLeft from './assets/bolt-down-left.svg'
+import boltDownRight from './assets/bolt-down-right.svg'
 
 export const PageHello = () => {
   return (
@@ -20,10 +23,24 @@ export const PageHello = () => {
             </div>
         </div>
         <div className={s.pageHello__game}>
-            <div className={s.game__wrapper}></div>
+            <div className={s.game__wrapper}>
+                <div className={s.game__field}></div>
+                <div className={s.game__components}>
+                    <div className={s.game__control}>
+                        <p className={s.white}>&#47;&#47; use keyboard</p>
+                        <p className={s.white}>&#47;&#47;arrows to play</p>
+                    </div>
+                </div>
+
+                <img className={s.bolt__UpLeft} src={boltUpLeft} alt="" />
+                <img className={s.bolt__UpRight} src={boltUpRight} alt="" />
+                <img className={s.bolt__DownLeft} src={boltDownLeft} alt="" />
+                <img className={s.bolt__DownRight} src={boltDownRight} alt="" />
+            </div>
+            <div className={s.blurGreen}></div>
+            <div className={s.blurBlue}></div>
         </div>
         {/* <img className={s.game__blur} src={blur} alt="" /> */}
-        <div className={s.blurGreen}></div>
     </main>
     );
 };
