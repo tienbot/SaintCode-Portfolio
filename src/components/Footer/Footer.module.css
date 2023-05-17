@@ -1,15 +1,15 @@
 .footer {
   display: flex;
   justify-content: flex-start;
-  outline: 1px solid #607b96;
+  border-top: 1px solid #1e2d3d;
   border-radius: 0 0 8px 8px;
 }
 .find {
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 146px;
   height: 52px;
-  text-indent: 36px;
   font-family: "Fira Code", sans-serif;
   font-style: normal;
   font-weight: 450;
@@ -17,7 +17,7 @@
   line-height: 21px;
   color: #607b96;
   border-radius: 0 0 0 8px;
-  border-right: 1px solid #607b96;
+  border-right: 1px solid #1e2d3d;
 }
 .instagram {
   display: flex;
@@ -26,8 +26,8 @@
   width: 50px;
   height: 52px;
   color: #607b96;
-  border-left: 1px solid #607b96;
-  border-right: 1px solid #607b96;
+  border-left: 1px solid #1e2d3d;
+  border-right: 1px solid #1e2d3d;
 }
 .facebook {
   display: flex;
@@ -36,7 +36,7 @@
   width: 50px;
   height: 52px;
   color: #607b96;
-  border-right: 1px solid #607b96;
+  border-right: 1px solid #1e2d3d;
 }
 .username {
   display: flex;
@@ -46,7 +46,7 @@
   width: 161px;
   height: 52px;
   margin-left: auto;
-  border-left: 1px solid #607b96;
+  border-left: 1px solid #1e2d3d;
   border-radius: 0 0 8px 0;
   font-family: "Fira Code", sans-serif;
   font-style: normal;
