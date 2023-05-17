@@ -81,7 +81,6 @@ export const PageHello = () => {
             <div className={s.blurGreen}></div>
             <div className={s.blurBlue}></div>
         </div>
-        {/* <img className={s.game__blur} src={blur} alt="" /> */}
     </main>
     );
 };
