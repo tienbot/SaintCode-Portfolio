@@ -1,4 +1,4 @@
-main {
+.pageHello {
     padding: 27px;
     display: flex;
     align-items: center;
@@ -23,7 +23,7 @@ main {
     color: #E5E9F0;
 }
 
-h1{
+.pageHello__h1{
     font-weight: 400;
     font-size: 62px;
     line-height: 81px;
@@ -47,7 +47,7 @@ h1{
     margin-bottom: 9.6px;
 }
 
-a {
+.pageHello__a {
     font-weight: 500;
     font-size: 16px;
     line-height: 21px;
@@ -93,7 +93,7 @@ a {
     justify-content: center;    
     align-items: flex-end;
     margin-right: 24px;
-    padding-bottom: 55px;
+    /* padding-bottom: 55px; */
 }
 
 .game__components{
@@ -236,8 +236,4 @@ a {
 
 .blue{
     color: #4D5BCE;
-}
-
-header,footer{
-    color:#fff;
 }

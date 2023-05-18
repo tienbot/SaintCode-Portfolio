@@ -7,29 +7,31 @@ import boltDownRight from './assets/bolt-down-right.svg'
 import arrow from './assets/arrow.svg'
 import foodItem from './assets/foodItem.svg'
 import {Button} from '../../components/Button/Button'
+import SnakeGame from "../../components/SnakeGame/SnakeGame";
 
 export const PageHello = () => {
   return (
-    <main>
+    <main className={s.pageHello}>
         <div className={s.pageHello__text}>
             <div className={s.pageHello__text_top}>
                 <p className={s.pageHello__textSuptext}>Hi all. I am</p>
-                <h1>Micheal Weaver</h1>
+                <h1 className={s.pageHello__h1}>Micheal Weaver</h1>
                 <p className={s.pageHello__textSubtext}>&gt;Front-end developer</p>
             </div>
             <div className={s.pageHello__text_bottom}>
                 <p>&#47;&#47;complete the game to continue</p>
                 <p>&#47;&#47;you can also see it on my Github page</p>
                 <p><span className={s.blue}>const</span> <span className={s.green}>githubLink</span><span className={s.white}> = </span> 
-                <a href="“https://github.com/example/url”">“https://github.com/example/url”</a>
+                <a className={s.pageHello__a} href="“https://github.com/example/url”">“https://github.com/example/url”</a>
                 </p>
             </div>
         </div>
         <div className={s.pageHello__game}>
             <div className={s.game__wrapper}>
-                <div className={s.game__field}>
-                    <Button children='start game' primary/>
-                </div>
+                {/* <div className={s.game__field}> */}
+                    {/* <Button children='start game' primary/> */}
+                    <SnakeGame/>
+                {/* </div> */}
                 <div className={s.game__components}>
                     <div className={s.game__comtent}>
                         <div className={s.game__control}>

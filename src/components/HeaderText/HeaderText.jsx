@@ -9,7 +9,7 @@ function HeaderText(props) {
   return (
     <NavLink
       to={to}
-      activeClassName={s.active}
+      activeclassname={s.active}
       className={s.HeaderText}
     >
       {title}
