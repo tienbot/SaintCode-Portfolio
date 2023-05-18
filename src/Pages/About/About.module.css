@@ -1,20 +1,26 @@
 .main {
+  display: block;
+  /* display: grid; */
+  /* justify-content: flex-start; */
+  /* grid-template-columns: 68px 243px auto 40%; */
+  /* grid-template-columns: 5% 10% 40% 45%; */
   width: 100%;
   height: 100%;
   padding: 0;
+  margin: 0;
 }
 .sidebar {
-  width: 68px;
+  /* width: 68px; */
   height: 100%;
   border-right: 1px solid #1e2d3d;
 }
 .menu__wrapper {
-  width: 243px;
+  /* width: 243px; */
   height: 100%;
   border-right: 1px solid #1e2d3d;
 }
 .left__content_wrapper {
-  width: 35%;
+  /* width: 50%; */
   height: 100%;
   border-right: 1px solid #1e2d3d;
 }
@@ -24,11 +30,11 @@
   border-bottom: 1px solid #1e2d3d;
 }
 .title__box {
-  min-width: 150px;
+  /* min-width: 150px; */
   height: 100%;
   border-right: 1px solid #1e2d3d;
 }
 .right__content_wrapper {
-  width: 40%;
+  /* width: 55%; */
   height: 100%;
 }
