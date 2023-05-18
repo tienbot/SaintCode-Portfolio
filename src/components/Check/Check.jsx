@@ -24,8 +24,8 @@ export const Check = () => {
   }
 
   return (
-    
-    <ul>
+    <div className={s.list}>
+    <ul >
       {checkedIcons.map(({ key, alt, active, text }) => (
         <li key={key}className={s.checkItem}>
           <label className={s.checkbox}>
@@ -41,6 +41,7 @@ export const Check = () => {
                <span className={`${s.text} ${active ? s.activeText : ''}`}>{text}</span>
         </li>
       ))}
-    </ul>
+      </ul>
+      </div>
   )
 }
