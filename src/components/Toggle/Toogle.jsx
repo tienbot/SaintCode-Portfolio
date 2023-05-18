@@ -1,28 +1,3 @@
-// import React, { useState } from 'react';
-// import s from "./Toggle.module.sass";
-// import s2 from "./ToggleTwo.module.sass";
-
-// export const CustomToggle = ({ arrowStyle, containerStyle }) => {
-//   const [isChecked, setIsChecked] = useState(false);
-
-//   const handleCheckboxChange = () => {
-//     setIsChecked(!isChecked);
-//   };
-
-//   return (
-//     <label className={`${s.checkbox} ${containerStyle}`}>
-//       <input
-//         className={s.check}
-//         type='checkbox'
-//         checked={isChecked}
-//         onChange={handleCheckboxChange}
-//       />
-//       <span className={`${s.checkmark} ${arrowStyle}`}></span>
-//     </label>
-//   );
-// };
-
-// export default CustomToggle;
 import React, { useState } from 'react';
 import s from "./Toogle.module.sass"
 import s2 from "./ToggleTwo.module.sass";
