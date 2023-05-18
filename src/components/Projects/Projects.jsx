@@ -4,11 +4,12 @@ import { Check } from '../Check/Check'
 import s from "./Projects.module.sass"
 export const Projects = () => {
   return (
+    <main className={s.main}>
+      <div className={s.wrapper}>
     <Toggle
-      arrowStyle="my-arrow-style"
-      containerStyle="my-container-style"
-      dropdownContent={<Check />}><label className={s.labelText}>projects</label>
-      
-    </Toggle>
+       dropdownContent={<Check />}><label className={s.labelText}>projects</label>
+        </Toggle>
+      </div>
+      </main>
   )
 }

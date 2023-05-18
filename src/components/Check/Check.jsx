@@ -36,7 +36,7 @@ export const Check = () => {
               onChange={() => handleCheckboxChange(key)}
             />
             <span className={s.checkmark}></span>
-            <IconBW {...{ [key]: true, active }} alt={alt} />
+          <IconBW {...{ [key]: true, active }} alt={alt} /> 
               </label>
                <span className={`${s.text} ${active ? s.activeText : ''}`}>{text}</span>
         </li>

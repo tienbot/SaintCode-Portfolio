@@ -27,12 +27,15 @@ export const Toggle = ({ arrowStyle, containerStyle, dropdownContent, children }
         <span className={`${s.checkmark} ${arrowStyle}`} onClick={handleArrowClick}></span>
       {children}
       </label>
-
+{/* 
       {isDropdownVisible && (
         <div className={s.dropdown}>
           {dropdownContent}
         </div>
-      )}
+      )} */}
+      <div className={`${s.dropdown} ${isDropdownVisible ? s.show : ''}`}>
+      {dropdownContent}
+    </div>
     </div>
   );
 };
