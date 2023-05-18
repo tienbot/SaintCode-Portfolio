@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import s from "./Toogle.module.sass"
 import s2 from "./ToggleTwo.module.sass";
 
-export const CustomToggle = ({ arrowStyle, containerStyle, dropdownContent }) => {
+export const Toggle = ({ arrowStyle, containerStyle, dropdownContent }) => {
   const [isChecked, setIsChecked] = useState(false);
   const [isDropdownVisible, setIsDropdownVisible] = useState(false);
 
@@ -35,6 +35,6 @@ export const CustomToggle = ({ arrowStyle, containerStyle, dropdownContent }) =>
   );
 };
 
-export default CustomToggle;
+export default Toggle;
 
 

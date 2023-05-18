@@ -24,6 +24,7 @@ export const Check = () => {
   }
 
   return (
+    
     <ul>
       {checkedIcons.map(({ key, alt, active, text }) => (
         <li key={key}className={s.checkItem}>
