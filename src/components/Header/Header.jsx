@@ -7,7 +7,7 @@ import TextComponent from '../TextComponent/TextComponent';
 const Hello = () => <p>_hello</p>;
 const AboutMe = () => <p>_about-me</p>;
 const Projects = () => <p>_projects</p>;
-const Contacts = () => <p>_contacts</p>;
+const Contacts = () => <p>_contact-me</p>;
 
 export const Header = () => {
   return (
@@ -30,7 +30,7 @@ export const Header = () => {
           </ul>
           <ul className={s.ul}>
             <li className={s.li}>
-              <HeaderText title="_contats" to="/contacts" />
+              <HeaderText title="_contat-me" to="/contacts" />
             </li>
           </ul>
         </nav>
