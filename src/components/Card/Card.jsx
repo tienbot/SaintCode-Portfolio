@@ -10,7 +10,7 @@ export const Card = () => {
     <div className={s.card}>
         <div className={s.card__top}>
             <img className={s.card__img} src={img} alt="изображение проекта" />
-            <IconColor vue alt='icon'/>
+            <IconColor js alt='icon'/>
         </div>
         <div className={s.card__bottom}>
             <p>Duis aute irure dolor in velit esse cillum dolore.</p>

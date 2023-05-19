@@ -3,6 +3,7 @@ import { Layout } from "../Layout/Layout";
 import {Header} from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import { PageHello } from "../Pages/PageHello/PageHello";
+import { Contacts } from "../Pages/Contacts/Contacts";
 import About from "../Pages/About/About";
 
 
@@ -12,7 +13,9 @@ function App() {
     <Layout>
       <Header/>
       <PageHello/>
+      {/* <Contacts/> */}
       {/* <About /> */}
+
       <Footer />
     </Layout>
   )

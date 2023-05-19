@@ -86,6 +86,7 @@ export const PageHello = () => {
             </div>
             <div className={s.blurGreen}></div>
             <div className={s.blurBlue}></div>
+            
         </div>
     </main>
     );
