@@ -2,7 +2,9 @@
     display: inline-block
     position: relative
     cursor: pointer
-    padding: 30px
+    padding: 10px
+    border-bottom: 1px solid #1e2d3d
+    width:100%
 .check 
     opacity: 0
     position: absolute
@@ -23,5 +25,24 @@
 .check:checked ~ .checkmark 
     background-image: url('./ToogleImg/Vector(3).png')
     transform: rotate(360deg)
+.dropdown 
+    opacity: 0
+    transform: translateY(-10px)
+    transition: opacity 0.3s ease, transform 0.3s ease
+.dropdown.show 
+    opacity: 1
+    transform: translateY(0)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
