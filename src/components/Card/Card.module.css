@@ -32,3 +32,19 @@
     font-size: 18px;
     color: #607B96;
 }
+.h2{
+    font-family: Fira Code;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 21px;
+    color: #5565E8;
+    margin-bottom: 14px;
+  }
+.span{
+    font-family: Fira Code;
+    font-size: 16px;
+    font-weight: 450;
+    line-height: 21px;
+    color:#607B96;
+    white-space: nowrap;
+}
