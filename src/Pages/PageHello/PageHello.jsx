@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import s from './PageHello.module.css'
 import boltUpLeft from './assets/bolt-up-left.svg'
 import boltUpRight from './assets/bolt-up-right.svg'
@@ -11,6 +11,7 @@ import SnakeGame from "../../components/SnakeGame/SnakeGame";
 
 
 export const PageHello = () => {
+
   return (
     <main className={s.pageHello}>
         <div className={s.pageHello__text}>
@@ -42,19 +43,19 @@ export const PageHello = () => {
                             <p className={s.white}>&#47;&#47; arrows to play</p>
                             <div className={s.buttonsControl}>
                                 <div className={s.buttonsControl__top}>
-                                    <button className={s.btnControl}>
+                                    <button className={s.btnControl} value='upBtn'>
                                         <img src={arrow} alt="" />
                                     </button>
                                 </div>
                                 <div className={s.buttonsControl__bottom}>
-                                    <button className={s.btnControl}>
-                                        <img className={s.btnControl_left} src={arrow} alt="" />
+                                    <button className={s.btnControl} value='leftBtn'>
+                                        <img className={s.btnControl_left} src={arrow} alt=""/>
                                     </button>
-                                    <button className={s.btnControl}>
-                                    <img className={s.btnControl_down} src={arrow} alt="" />
+                                    <button className={s.btnControl} value='downBtn'>
+                                        <img className={s.btnControl_down} src={arrow} alt="" />
                                     </button>
-                                    <button className={s.btnControl}>
-                                    <img className={s.btnControl_right} src={arrow} alt="" />
+                                    <button className={s.btnControl} value='rightBtn'>
+                                        <img className={s.btnControl_right} src={arrow} alt="" />
                                     </button>
                                 </div>
                             </div>

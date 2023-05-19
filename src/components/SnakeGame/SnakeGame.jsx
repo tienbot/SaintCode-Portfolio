@@ -3,7 +3,6 @@ import s from '../../Pages/PageHello/PageHello.module.css';
 import iconfood from '../../Pages/PageHello/assets/foodItem.svg'
 
 function SnakeGame(){
-    const fruitRef = useRef(null);
   const canvasRef = useRef(null);
   const [ctx, setCtx] = useState(null);
   const [direction, setDirection] = useState("right");
@@ -59,14 +58,14 @@ function SnakeGame(){
       head.y >= canvasHeight / blockSize
     ) {
       setGameOver(true);
-      console.log('Game Over wall')
+    //   console.log('Game Over wall')
     }
 
     // Проверка на столкновение с самим собой
     for (let i = 1; i < snake.length; i++) {
       if (head.x === snake[i].x && head.y === snake[i].y) {
         setGameOver(true);
-        console.log('Game Over myself')
+        // console.log('Game Over myself')
         break;
       }
     }
@@ -78,43 +77,25 @@ function SnakeGame(){
         ...prevSnake,
       ]);
       generateApple();
-    //   drawFruit()
     }
   };
-
-  function drawFruit() {
-    if (fruitRef.current) {
-      const context = fruitRef.current.getContext('2d');
-      // Настройка изображения фрукта в контексте
-      const image = new Image();
-      image.src = {iconfood};
-  
-      image.onload = () => {
-        context.drawImage(image, 0, 0);
-      };
-      context.drawImage( 30, 30, 10, 10);
-    }
-  }
 
   const draw = () => {
     ctx.clearRect(0, 0, canvasWidth, canvasHeight);
 
     // Прорисовка яблока
-    var img = new Image();
-    img.src = iconfood;
+    let appleImg = new Image();
+    appleImg.src = iconfood;
     ctx.fillStyle = "#43D9AD";
-    ctx.drawImage(img, apple.x * blockSize, apple.y * blockSize);
-
-    // img.onload = function() {
-    //     ctx.drawImage(img, 30, 30);
-    // }
-    img.src = iconfood;
+    ctx.drawImage(appleImg, apple.x * blockSize-7, apple.y * blockSize-7);
 
     // Прорисовка змейки
     ctx.fillStyle = "#43D9AD";
     snake.forEach((segment) => {
       ctx.fillRect(segment.x * blockSize, segment.y * blockSize, blockSize, blockSize);
     });
+
+    ctx.drawImage(appleImg, snake[0].x * blockSize-7, snake[0].y * blockSize-7);
   };
 
   useEffect(() => {
@@ -129,18 +110,19 @@ function SnakeGame(){
     const handleKeyDown = (event) => {
       const { keyCode } = event;
 
-      if (keyCode === 37 && direction !== "right") {
-        setDirection("left");
-      } else if ((keyCode === 38) && direction !== "down") {
+      if ((keyCode === 38 || event.target.value === 'upBtn')  && direction !== "down") {
         setDirection("up");
-      } else if (keyCode === 39 && direction !== "left") {
-        setDirection("right");
-      } else if (keyCode === 40 && direction !== "up") {
+      } else if ((keyCode === 37 || event.target.value === 'leftBtn') && direction !== "right") {
+        setDirection("left");
+      } else if ((keyCode === 40 || event.target.value === 'downBtn') && direction !== "up") {
         setDirection("down");
-      }
+      } else if ((keyCode === 39 || event.target.value === 'rightBtn') && direction !== "left") {
+        setDirection("right");
+      } 
     };
 
     document.addEventListener("keydown", handleKeyDown);
+    document.addEventListener("click", handleKeyDown);
 
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
@@ -171,7 +153,7 @@ function SnakeGame(){
   };
 
   if(gameOver){
-    console.log("end")
+    // console.log("end")
   }
 
   return (
