@@ -237,3 +237,10 @@
 .blue{
     color: #4D5BCE;
 }
+
+.snake{
+    width: '100%';
+    max-width: '238px'; 
+    height: '100%';
+    border-radius: 15px;
+}

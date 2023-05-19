@@ -9,6 +9,7 @@ import foodItem from './assets/foodItem.svg'
 import {Button} from '../../components/Button/Button'
 import SnakeGame from "../../components/SnakeGame/SnakeGame";
 
+
 export const PageHello = () => {
   return (
     <main className={s.pageHello}>
@@ -30,7 +31,9 @@ export const PageHello = () => {
             <div className={s.game__wrapper}>
                 {/* <div className={s.game__field}> */}
                     {/* <Button children='start game' primary/> */}
-                    <SnakeGame/>
+                    <SnakeGame>
+                        <Button></Button>
+                    </SnakeGame>
                 {/* </div> */}
                 <div className={s.game__components}>
                     <div className={s.game__comtent}>

@@ -1,7 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import s from '../../Pages/PageHello/PageHello.module.css';
+import iconfood from '../../Pages/PageHello/assets/foodItem.svg'
 
-const SnakeGame = () => {
+function SnakeGame(){
+    const fruitRef = useRef(null);
   const canvasRef = useRef(null);
   const [ctx, setCtx] = useState(null);
   const [direction, setDirection] = useState("right");
@@ -9,6 +11,11 @@ const SnakeGame = () => {
     { x: 10, y: 10 },
     { x: 9, y: 10 },
     { x: 8, y: 10 },
+    { x: 7, y: 10 },
+    { x: 6, y: 10 },
+    { x: 5, y: 10 },
+    { x: 4, y: 10 },
+    { x: 3, y: 10 },
   ]);
   const [apple, setApple] = useState({ x: 15, y: 10 });
   const [gameOver, setGameOver] = useState(false);
@@ -17,6 +24,7 @@ const SnakeGame = () => {
   const canvasHeight = 405;
   const blockSize = 8;
 
+  //передвижение змеи
   const moveSnake = () => {
     const head = { x: snake[0].x, y: snake[0].y };
 
@@ -43,7 +51,7 @@ const SnakeGame = () => {
   const checkCollision = () => {
     const head = snake[0];
 
-    // Check collision with walls
+    // Проверка на столкновение со стенами
     if (
       head.x < 0 ||
       head.x >= canvasWidth / blockSize ||
@@ -51,40 +59,59 @@ const SnakeGame = () => {
       head.y >= canvasHeight / blockSize
     ) {
       setGameOver(true);
+      console.log('Game Over wall')
     }
 
-    // Check collision with self
+    // Проверка на столкновение с самим собой
     for (let i = 1; i < snake.length; i++) {
       if (head.x === snake[i].x && head.y === snake[i].y) {
         setGameOver(true);
+        console.log('Game Over myself')
         break;
       }
     }
 
-    // Check collision with apple
+    // Проверка на столкновение с яблоком
     if (head.x === apple.x && head.y === apple.y) {
       setSnake((prevSnake) => [
         { x: apple.x, y: apple.y },
         ...prevSnake,
       ]);
       generateApple();
+    //   drawFruit()
     }
   };
+
+  function drawFruit() {
+    if (fruitRef.current) {
+      const context = fruitRef.current.getContext('2d');
+      // Настройка изображения фрукта в контексте
+      const image = new Image();
+      image.src = {iconfood};
+  
+      image.onload = () => {
+        context.drawImage(image, 0, 0);
+      };
+      context.drawImage( 30, 30, 10, 10);
+    }
+  }
 
   const draw = () => {
     ctx.clearRect(0, 0, canvasWidth, canvasHeight);
 
-    // Draw apple
-    ctx.fillStyle = "red";
-    ctx.fillRect(
-      apple.x * blockSize,
-      apple.y * blockSize,
-      blockSize,
-      blockSize
-    );
+    // Прорисовка яблока
+    var img = new Image();
+    img.src = iconfood;
+    ctx.fillStyle = "#43D9AD";
+    ctx.drawImage(img, apple.x * blockSize, apple.y * blockSize);
 
-    // Draw snake
-    ctx.fillStyle = "#fff";
+    // img.onload = function() {
+    //     ctx.drawImage(img, 30, 30);
+    // }
+    img.src = iconfood;
+
+    // Прорисовка змейки
+    ctx.fillStyle = "#43D9AD";
     snake.forEach((segment) => {
       ctx.fillRect(segment.x * blockSize, segment.y * blockSize, blockSize, blockSize);
     });
@@ -104,7 +131,7 @@ const SnakeGame = () => {
 
       if (keyCode === 37 && direction !== "right") {
         setDirection("left");
-      } else if (keyCode === 38 && direction !== "down") {
+      } else if ((keyCode === 38) && direction !== "down") {
         setDirection("up");
       } else if (keyCode === 39 && direction !== "left") {
         setDirection("right");
@@ -134,6 +161,7 @@ const SnakeGame = () => {
     };
   }, [ctx, moveSnake, checkCollision, draw]);
 
+  // Генерация яблока на поле
   const generateApple = () => {
     const newApple = {
       x: Math.floor(Math.random() * (canvasWidth / blockSize)),
@@ -142,16 +170,20 @@ const SnakeGame = () => {
     setApple(newApple);
   };
 
+  if(gameOver){
+    console.log("end")
+  }
+
   return (
+    <>
     <div className={s.game__field}>
         <canvas className={s.snake}
-        ref={canvasRef}
-        width={canvasWidth}
-        height={canvasHeight}
-        style={{width: '100%',
-    'maxWidth': '238px', height: '100%' }}
-      />
+            ref={canvasRef}
+            width={canvasWidth}
+            height={canvasHeight}
+        />
     </div>
+    </>
   );
 };
 
