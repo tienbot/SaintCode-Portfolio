@@ -12,6 +12,34 @@ import SnakeGame from "../../components/SnakeGame/SnakeGame";
 
 export const PageHello = () => {
 
+    const handleKeyDown = (event) => {
+        const { keyCode } = event;
+        function clickButton(id){
+            setTimeout(()=>{
+                document.getElementById(id).style.borderColor='#1E2D3D'
+                document.getElementById(id).addEventListener('mousemove', function() {
+                    this.style.borderColor='#fff'
+                    this.addEventListener('mouseout', function() {
+                        this.style.borderColor='#1E2D3D'
+                      });
+                  });
+            }, 100)
+            document.getElementById(id).style.borderColor='#fff'
+        }
+  
+        if (keyCode === 38) {
+            clickButton('upBtn')
+        } else if (keyCode === 37) {
+            clickButton("leftBtn");
+          } else if (keyCode === 40) {
+            clickButton("downBtn");
+          } else if (keyCode === 39) {
+            clickButton("rightBtn");
+          } 
+      };
+  
+      document.addEventListener("keydown", handleKeyDown);
+
   return (
     <main className={s.pageHello}>
         <div className={s.pageHello__text}>
@@ -43,19 +71,19 @@ export const PageHello = () => {
                             <p className={s.white}>&#47;&#47; arrows to play</p>
                             <div className={s.buttonsControl}>
                                 <div className={s.buttonsControl__top}>
-                                    <button className={s.btnControl} value='upBtn'>
-                                        <img src={arrow} alt="" />
+                                    <button className={s.btnControl} id='upBtn'>
+                                        <img src={arrow} id='upBtnImg' alt="" />
                                     </button>
                                 </div>
                                 <div className={s.buttonsControl__bottom}>
-                                    <button className={s.btnControl} value='leftBtn'>
-                                        <img className={s.btnControl_left} src={arrow} alt=""/>
+                                    <button className={s.btnControl} id='leftBtn'>
+                                        <img className={s.btnControl_left} src={arrow} id='leftBtnImg' alt=""/>
                                     </button>
-                                    <button className={s.btnControl} value='downBtn'>
-                                        <img className={s.btnControl_down} src={arrow} alt="" />
+                                    <button className={s.btnControl} id='downBtn'>
+                                        <img className={s.btnControl_down} src={arrow} id='downBtnImg' alt="" />
                                     </button>
-                                    <button className={s.btnControl} value='rightBtn'>
-                                        <img className={s.btnControl_right} src={arrow} alt="" />
+                                    <button className={s.btnControl} id='rightBtn'>
+                                        <img className={s.btnControl_right} src={arrow} id='rightBtnImg' alt="" />
                                     </button>
                                 </div>
                             </div>

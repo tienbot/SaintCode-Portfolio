@@ -110,13 +110,13 @@ function SnakeGame(){
     const handleKeyDown = (event) => {
       const { keyCode } = event;
 
-      if ((keyCode === 38 || event.target.value === 'upBtn')  && direction !== "down") {
+      if ((keyCode === 38 || event.target.id.includes('up'))  && direction !== "down") {
         setDirection("up");
-      } else if ((keyCode === 37 || event.target.value === 'leftBtn') && direction !== "right") {
+      } else if ((keyCode === 37 || event.target.id.includes('left')) && direction !== "right") {
         setDirection("left");
-      } else if ((keyCode === 40 || event.target.value === 'downBtn') && direction !== "up") {
+      } else if ((keyCode === 40 || event.target.id.includes('down')) && direction !== "up") {
         setDirection("down");
-      } else if ((keyCode === 39 || event.target.value === 'rightBtn') && direction !== "left") {
+      } else if ((keyCode === 39 || event.target.id.includes('right')) && direction !== "left") {
         setDirection("right");
       } 
     };
