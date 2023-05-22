@@ -50,15 +50,15 @@ function App() {
   return (
     <Layout>
       <Header />
-      {/* <PageHello/> */}
-      <About>
+      <PageHello/>
+      {/* <About>
         <Info
           infoRef={infoRef}
           infoLinesArr={infoLinesArr}
           description={personalInfo.description}
           title={personalInfo.title}
         />
-      </About>
+      </About> */}
       <Footer />
     </Layout>
   );

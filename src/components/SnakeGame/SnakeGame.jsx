@@ -19,7 +19,6 @@ function SnakeGame(){
     { x: 3, y: 10 },
   ]);
   const [apple, setApple] = useState({ x: 15, y: 10 });
-
   const canvasWidth = 238;
   const canvasHeight = 405;
   const blockSize = 8;
@@ -110,6 +109,9 @@ function SnakeGame(){
     // ctx.fill();
   };
 
+//   const canvas = canvasRef.current;
+//   const context = canvas.getContext("2d");
+
   useEffect(() => {
     const canvas = canvasRef.current;
     const context = canvas.getContext("2d");
@@ -150,7 +152,6 @@ function SnakeGame(){
       checkCollision();
       draw();
     }, 250);
-
     
     return () => {
         clearInterval(gameLoop);
@@ -176,11 +177,12 @@ function SnakeGame(){
     }
   }
 
-  const startGame = (event) => {
+  const startGame = (event, context) => {
     if (event.target.className.includes('startGame')){
-        console.log('start')
+        // console.log('start')
+        setCtx(context);
         event.target.style='display:none'
-        // setCtx(true);
+        
     }
   };
   document.addEventListener("click", startGame);
