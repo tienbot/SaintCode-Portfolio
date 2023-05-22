@@ -82,6 +82,7 @@
 }
 
 .game__field{
+    position: relative;
     height: 100%;
     width: 100%;
     max-width: 238px;
@@ -123,7 +124,7 @@
     transform: rotate(-180deg);
 }
 
-.btnControl:hover, #upBtn{
+.btnControl:hover{
     cursor: pointer;
     border: 1px solid #fff;
 }
