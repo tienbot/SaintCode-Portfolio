@@ -34,6 +34,7 @@ export const Projects = () => {
             name={project.name}
             imageUrl={project.owner.avatar_url}
             link={project.html_url}
+            
            />
         ))} 
       </div>

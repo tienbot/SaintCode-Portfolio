@@ -6,10 +6,11 @@ const icons = [
   { key: 'react', alt: 'React', active: true, text: 'React' },
   { key: 'html', alt: 'HTML', active: false, text: 'HTML' },
   { key: 'css', alt: 'CSS', active: false, text: 'CSS' },
+  { key: 'js', alt: 'Javascript', active: false, text: 'Javascript'},
   { key: 'vue', alt: 'Vue', active: false, text: 'Vue' },
   { key: 'angular', alt: 'Angular', active: false, text: 'Angular' },
   { key: 'gatsby', alt: 'Gatsby', active: false, text: 'Gatsby' },
-  { key: 'flutter', alt: 'Flutter', active: false, text: 'Flutter' }
+  { key: 'flutter', alt: 'Flutter', active: false, text: 'Flutter' },
 ];
 
 export const Check = () => {
