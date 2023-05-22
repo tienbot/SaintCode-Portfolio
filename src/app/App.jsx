@@ -8,6 +8,7 @@ import About from "../Pages/About/About";
 import Info from "../components/info/Info";
 import personalInfo from "../components/info/personal_info";
 
+
 function App() {
   // const { title, description, content } = personalInfo;
 
