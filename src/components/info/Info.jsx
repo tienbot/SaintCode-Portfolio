@@ -2,7 +2,7 @@ import s from "./Info.module.css";
 import cross from "./cross.svg";
 
 const Info = ({ title, description, content, infoRef, infoLinesArr }) => {
-  console.log(infoLinesArr);
+  let lastNum = 0;
   return (
     <div className={s.wrapper} ref={infoRef}>
       <div className={s.upper}>
@@ -14,29 +14,33 @@ const Info = ({ title, description, content, infoRef, infoLinesArr }) => {
           </button>
         </div>
       </div>
-
-      <p className={s.text}>
-        <span className={s.line__first}></span>
-        <span className={s.line__elem}>1</span>&nbsp;&nbsp;&nbsp;/**
-      </p>
-      <p className={s.text}>
-        <span className={s.line__first}></span>
-        <span className={s.line__second}>2</span>&nbsp;&nbsp;&nbsp;*&nbsp;
-        {description}
-      </p>
-      {infoLinesArr.map((line, index) => (
-        <p className={s.text} key={index}>
-          <span className={s.line__num}>
-            <span className={s.line__elem}> {index + 3} </span>
-
-            <span className={s.line__elem}>*&nbsp;</span>
-          </span>
-          {line}
+      <div className={s.content}>
+        <p className={s.text}>
+          <span className={s.line__first}></span>
+          <span className={s.line__elem}>1</span>&nbsp;&nbsp;&nbsp;/**
         </p>
-      ))}
-      <p className={s.p}>
-        <span className={s.line__last}></span>&nbsp;&nbsp;&nbsp;*/
-      </p>
+        <p className={s.text}>
+          <span className={s.line__first}></span>
+          <span className={s.line__second}>2</span>&nbsp;&nbsp;&nbsp;*&nbsp;
+          {description}
+        </p>
+        {infoLinesArr.map((line, index) => {
+          lastNum = index + 4;
+          return (
+            <p className={s.text} key={index}>
+              <span className={s.line__num}>
+                <span className={s.line__elem}> {index + 3} </span>
+
+                <span className={s.line__elem}>*&nbsp;</span>
+              </span>
+              {line}
+            </p>
+          );
+        })}
+        <p className={s.p}>
+          <span className={s.line__last}>{lastNum}</span>&nbsp;&nbsp;&nbsp;*/
+        </p>
+      </div>
     </div>
   );
 };

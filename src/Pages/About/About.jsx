@@ -1,5 +1,4 @@
 import style from "./About.module.css";
-import Scrollbar from "../../ui/Scrollbar/Scrollbar.jsx";
 import Info from "../../components/info/Info";
 
 const About = ({ children }) => {
@@ -15,7 +14,6 @@ const About = ({ children }) => {
       </div>
       <div className={style.right__content_wrapper}>
         <div className={style.content__title}></div>
-        <Scrollbar />
       </div>
     </main>
   );

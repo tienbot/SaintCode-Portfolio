@@ -17,8 +17,54 @@
 .left__content_wrapper {
   /* width: 50%; */
   height: 100%;
+  /* max-height: 130vh; */
+  /* padding-bottom: 30px; */
   border-right: 1px solid #1e2d3d;
+  /* overflow: scroll; */
 }
+/* .left__content_wrapper::-webkit-scrollbar {
+  width: 26px;
+}
+.left__content_wrapper::-moz-scrollbar {
+  width: 26px;
+}
+.left__content_wrapper::-ms-scrollbar {
+  width: 26px;
+}
+.left__content_wrapper::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+  background: #011627;
+  border: 1px solid #1e2d3d;
+}
+.left__content_wrapper::-moz-scrollbar-track {
+  background-color: #f1f1f1;
+  background: #011627;
+  border: 1px solid #1e2d3d;
+}
+.left__content_wrapper::-ms-scrollbar-track {
+  background-color: #f1f1f1;
+  background: #011627;
+  border: 1px solid #1e2d3d;
+}
+.left__content_wrapper::-webkit-scrollbar-thumb {
+  background-color: #607b96;
+}
+.left__content_wrapper::-moz-scrollbar-thumb {
+  background-color: #607b96;
+}
+.left__content_wrapper::-ms-scrollbar-thumb {
+  background-color: #607b96;
+}
+.left__content_wrapper::-webkit-scrollbar-thumb:hover {
+  filter: brightness(150%);
+}
+.left__content_wrapper::-moz-scrollbar-thumb:hover {
+  filter: brightness(150%);
+}
+.left__content_wrapper::-ms-scrollbar-thumb:hover {
+  filter: brightness(150%);
+} */
+
 .text {
   color: white;
   counter-reset: line;
@@ -42,3 +88,45 @@
   /* width: 55%; */
   height: 100%;
 }
+/* .right__content_wrapper::-webkit-scrollbar {
+  width: 26px;
+}
+.right__content_wrapper::-moz-scrollbar {
+  width: 26px;
+}
+.right__content_wrapper::-ms-scrollbar {
+  width: 26px;
+}
+.right__content_wrapper::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+  background: #011627;
+  border: 1px solid #1e2d3d;
+}
+.right__content_wrapper::-moz-scrollbar-track {
+  background-color: #f1f1f1;
+  background: #011627;
+  border: 1px solid #1e2d3d;
+}
+.right__content_wrapper::-ms-scrollbar-track {
+  background-color: #f1f1f1;
+  background: #011627;
+  border: 1px solid #1e2d3d;
+}
+.right__content_wrapper::-webkit-scrollbar-thumb {
+  background-color: #607b96;
+}
+.right__content_wrapper::-moz-scrollbar-thumb {
+  background-color: #607b96;
+}
+.right__content_wrapper::-ms-scrollbar-thumb {
+  background-color: #607b96;
+}
+.right__content_wrapper::-webkit-scrollbar-thumb:hover {
+  filter: brightness(150%);
+}
+.right__content_wrapper::-moz-scrollbar-thumb:hover {
+  filter: brightness(150%);
+}
+.right__content_wrapper::-ms-scrollbar-thumb:hover {
+  filter: brightness(150%);
+} */
