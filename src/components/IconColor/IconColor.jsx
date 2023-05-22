@@ -7,6 +7,7 @@ import htmlIcon from './assets/HTML.svg'
 import reactIcon from './assets/React.svg'
 import gatsbyIcon from './assets/Gatsby.svg'
 import vueIcon from './assets/Vue.svg'
+import jsIcon from './assets/JS.svg'
 
 const icons = {
     angular: angularIcon,
@@ -15,7 +16,8 @@ const icons = {
     html: htmlIcon,
     react: reactIcon,
     gatsby: gatsbyIcon,
-    vue: vueIcon
+    vue: vueIcon,
+    js: jsIcon
   };
   
   export const IconColor = ({ alt, ...props }) => {

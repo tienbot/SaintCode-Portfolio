@@ -9,11 +9,29 @@
     max-width: 1782px
     height: 100%
     padding: 0
+    display: flex
 .wrapper
-    // width: 311px
     width: 100%
     max-width: 311px
     height: 100%
-    border-right: 1px solid #1e2d3d  
-      
+    border-right: 1px solid #1e2d3d
+.card_div
+    padding: 191px 125px 0px 125px
+    height: 100%
+    width: 1445px
+    overflow: auto
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+    grid-gap: 40px
+.card_div::-webkit-scrollbar 
+    width: 18.5px /* Set the width of the scrollbar */
+.card_div::-webkit-scrollbar-track 
+    background-color: #011627 /* Set the background color of the scrollbar track */
+    border: 1px solid #1E2D3D
+
+.card_div::-webkit-scrollbar-thumb 
+    background-color:#607B96 
+    border-radius: 4px
+    height:7px
+
 

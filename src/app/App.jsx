@@ -4,10 +4,10 @@ import { Layout } from "../Layout/Layout";
 import { Header } from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import { PageHello } from "../Pages/PageHello/PageHello";
+import { Contacts } from "../Pages/Contacts/Contacts";
 import About from "../Pages/About/About";
 import Info from "../components/info/Info";
 import personalInfo from "../components/info/personal_info";
-
 
 function App() {
   // const { title, description, content } = personalInfo;
