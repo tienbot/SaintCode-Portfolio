@@ -9,6 +9,7 @@ export const Button = (props) => {
         primary,
         ghost,
         startGame,
+        playAgain
       } = props;
     
     //s.button - дефолтный класс кнопки
@@ -17,6 +18,7 @@ export const Button = (props) => {
         [s.button__primary]: primary,
         [s.button__ghost]: ghost,
         [s.button__startGame]: startGame,
+        [s.button__playAgain]: playAgain,
     });
 
   return (

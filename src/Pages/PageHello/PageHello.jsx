@@ -11,7 +11,7 @@ import SnakeGame from "../../components/SnakeGame/SnakeGame";
 
 
 export const PageHello = () => {
-
+    //управление через кнопки на странице
     const handleKeyDown = (event) => {
         const { keyCode } = event;
         function clickButton(id){

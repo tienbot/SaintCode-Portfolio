@@ -6,7 +6,7 @@ import {Button} from '../../components/Button/Button'
 function SnakeGame(){
   const canvasRef = useRef(null);
   const [ctx, setCtx] = useState(null);
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(9);
   const [direction, setDirection] = useState("up");
   const [snake, setSnake] = useState([
     { x: 11, y: 12 },
@@ -38,6 +38,8 @@ function SnakeGame(){
   const canvasHeight = 405;
   const blockSize = 8;
   const [gameStarted, setGameStarted] = useState(false);
+  const [gameWin, setGameWin] = useState(false);
+  const [gameLoose, setGameLoose] = useState(false);
 
   //передвижение змеи
   const moveSnake = () => {
@@ -74,12 +76,14 @@ function SnakeGame(){
       head.y >= canvasHeight / blockSize
     ) {
       setCtx(false);
+      setGameLoose(true);
     }
 
     // Проверка на столкновение с самим собой
     for (let i = 1; i < snake.length; i++) {
       if (head.x === snake[i].x && head.y === snake[i].y) {
         setCtx(false);
+        setGameLoose(true);
         break;
       }
     }
@@ -139,7 +143,6 @@ function SnakeGame(){
     const canvas = canvasRef.current;
     const context = canvas.getContext("2d");
     setCtx(context);
-    // setCtx(false);
   }, []);
 
   useEffect(() => {
@@ -199,16 +202,53 @@ function SnakeGame(){
     } else {
         document.querySelector('.PageHello_food__wrapper__LkGxo').children[count].style.opacity=1
         setCtx(false);
+        setGameWin(true);
     }
   }
 
-  const startGame = (event, context) => {
+  const startGame = (event) => {
     if (event.target.className.includes('startGame')){
         setGameStarted(true);
         event.target.style='display:none'
+    } else if (event.target.textContent.includes('again')){
+        startGameAgain()
     }
   };
   document.addEventListener("click", startGame);
+
+  function startGameAgain() {
+    setGameWin(false);
+    setGameLoose(false);
+    setCount(9);
+    setDirection("up");
+    setSnake([
+        { x: 11, y: 12 },
+        { x: 11, y: 13 },
+        { x: 11, y: 14 },
+        { x: 11, y: 15 },
+        { x: 11, y: 16 },
+        { x: 11, y: 17 },
+        { x: 11, y: 18 },
+        { x: 11, y: 19 },
+        { x: 11, y: 20 },
+        { x: 11, y: 21 },
+        { x: 11, y: 20 },
+        { x: 12, y: 21 },
+        { x: 13, y: 21 },
+        { x: 14, y: 21 },
+        { x: 15, y: 21 },
+        { x: 16, y: 21 },
+        { x: 17, y: 21 },
+        { x: 17, y: 22 },
+        { x: 17, y: 23 },
+        { x: 17, y: 24 },
+        { x: 17, y: 25 },
+        { x: 17, y: 26 },
+        { x: 17, y: 27 },
+    ]);
+    setApple({ x: 11, y: 7 });
+    // setCtx(null);
+  };
 
   return (
     <>
@@ -218,7 +258,15 @@ function SnakeGame(){
             width={canvasWidth}
             height={canvasHeight}
         />
-        {!gameStarted && <Button children='start game' primary startGame onClick={startGame} />}
+        {!gameStarted && <Button children='start game' primary startGame/>}
+        {gameWin && <>
+            <div className={s.game__message}>WELL DONE!</div>
+            <Button id='qwerty' children='play-again' playAgain/>
+        </>}
+        {gameLoose && <>
+            <div className={s.game__message}>GAME OVER!</div>
+            <Button id='qwerty' children='start-again' playAgain/>
+        </>}
     </div>
     </>
   );
