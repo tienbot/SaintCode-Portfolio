@@ -5,7 +5,7 @@ import { Button } from '../Button/Button'
 import { IconColor } from '../IconColor/IconColor'
 import { IconBW} from '../IconBW/IconBW'
 
-export const Card = ({ name, imageUrl, link}) => {
+export const Card = ({ name, imageUrl, link, isVisible}) => {
  const getIconsByProjectName = (projectName) => {
     const iconsByProject = {
       'denis-novik': ['html', 'css'],
@@ -26,6 +26,10 @@ export const Card = ({ name, imageUrl, link}) => {
   };
 
   const projectIcons = getIconsByProjectName(name);
+  if (!isVisible) {
+    console.log(isVisible);
+    return null; // Hide the card if it is not visible
+  }
   return (
     <div className={s.card}>
      <h2 className={s.h2}>Projects <span className={s.span}>// _{name}</span></h2>

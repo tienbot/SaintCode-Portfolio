@@ -58,12 +58,7 @@ export const PageHello = () => {
         </div>
         <div className={s.pageHello__game}>
             <div className={s.game__wrapper}>
-                {/* <div className={s.game__field}> */}
-                    {/* <Button children='start game' primary/> */}
-                    <SnakeGame>
-                        <Button></Button>
-                    </SnakeGame>
-                {/* </div> */}
+                    <SnakeGame/>
                 <div className={s.game__components}>
                     <div className={s.game__comtent}>
                         <div className={s.game__control}>
@@ -91,13 +86,13 @@ export const PageHello = () => {
                         <div className={s.game__food}>
                             <p className={s.white}>&#47;&#47; food left</p>
                             <div className={s.food__wrapper}>
-                                <img className={s.food__active} src={foodItem} alt="" />
-                                <img className={s.food__active} src={foodItem} alt="" />
-                                <img className={s.food__active} src={foodItem} alt="" />
-                                <img className={s.food__active} src={foodItem} alt="" />
-                                <img className={s.food__active} src={foodItem} alt="" />
-                                <img className={s.food__active} src={foodItem} alt="" />
-                                <img className={s.food__active} src={foodItem} alt="" />
+                                <img src={foodItem} alt="" />
+                                <img src={foodItem} alt="" />
+                                <img src={foodItem} alt="" />
+                                <img src={foodItem} alt="" />
+                                <img src={foodItem} alt="" />
+                                <img src={foodItem} alt="" />
+                                <img src={foodItem} alt="" />
                                 <img src={foodItem} alt="" />
                                 <img src={foodItem} alt="" />
                                 <img src={foodItem} alt="" />
