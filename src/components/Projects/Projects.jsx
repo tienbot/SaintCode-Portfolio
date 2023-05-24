@@ -32,21 +32,23 @@ const filteredProjects = projects.filter((project) =>
   <label className={s.labelText}>projects</label>
 </Toggle>
       </div>
-       <div className={s.border}>
-        <ButtonX />
-       </div>
-      <hr/>
-      <div className={s.card_div}>
-        {filteredProjects.map((project, index) => (
-          <Card
-            key={project.id}
-            name={project.name}
-            imageUrl={project.owner.avatar_url}
-            link={project.html_url}
-            isVisible={checkedProjects.includes(project.name.toLowerCase())}
-            index={index + 1} // Add the project index prop
-          />
-        ))}
+      <div className={s.content}>
+        <div className={s.border}>
+            <ButtonX />
+        </div>
+        {/* <hr/> */}
+        <div className={s.card_div}>
+            {filteredProjects.map((project, index) => (
+            <Card
+                key={project.id}
+                name={project.name}
+                imageUrl={project.owner.avatar_url}
+                link={project.html_url}
+                isVisible={checkedProjects.includes(project.name.toLowerCase())}
+                index={index + 1} // Add the project index prop
+            />
+            ))}
+        </div>
       </div>
     </main>
   );
