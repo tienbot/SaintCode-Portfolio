@@ -5,7 +5,7 @@ import s from './Button.module.css'
 export const Button = (props) => {
     const {
         className,
-        children,
+        textBtn,
         primary,
         ghost,
         startGame,
@@ -22,6 +22,6 @@ export const Button = (props) => {
     });
 
   return (
-        <button className={innerClassName}>{children}</button>
+        <button className={innerClassName}>{textBtn}</button>
   )
 }

@@ -67,7 +67,7 @@ export const Card = ({ name, imageUrl, link, isVisible, index }) => {
 //         </div>
 //         <div className={s.card__bottom}>
 //             <p>Duis aute irure dolor in velit esse cillum dolore.</p>
-//             <Button children='view-project' ghost/>
+//             <Button textBtn='view-project' ghost/>
 //             <IconBW css active alt='icon'/>
 //             <IconBW vue active alt='icon'/>
 //         </div>

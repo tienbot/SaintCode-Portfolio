@@ -4,6 +4,8 @@
     width: 100vw;
     padding: 54px;
     font-family: 'Fira Code';
+    display: flex;
+    justify-content: center;
 }
 
 .page__wrapper{
@@ -14,9 +16,20 @@
     border: 1px solid #1E2D3D;
     border-radius: 8px;
     background: #011627;
-    /* margin: 15px; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     overflow: hidden;
+}
+
+@media screen and (max-width: 1440px) {
+    .page{
+        padding: 30px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .page{
+        padding: 15px;
+    }
 }

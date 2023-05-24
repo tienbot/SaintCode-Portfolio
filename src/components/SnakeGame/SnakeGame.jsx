@@ -6,7 +6,7 @@ import {Button} from '../../components/Button/Button'
 function SnakeGame(){
   const canvasRef = useRef(null);
   const [ctx, setCtx] = useState(null);
-  const [count, setCount] = useState(9);
+  const [count, setCount] = useState(0);
   const [direction, setDirection] = useState("up");
   const [snake, setSnake] = useState([
     { x: 11, y: 12 },
@@ -40,6 +40,7 @@ function SnakeGame(){
   const [gameStarted, setGameStarted] = useState(false);
   const [gameWin, setGameWin] = useState(false);
   const [gameLoose, setGameLoose] = useState(false);
+  const speedGame = 250;
 
   //передвижение змеи
   const moveSnake = () => {
@@ -116,16 +117,26 @@ function SnakeGame(){
     ctx.fillStyle = "#43D9AD";
     snake.forEach((segment, index) => {
     if (index === 0) {
-        // Рисование круглой головы
+        // Прорисовка головы змейки
         const radius = blockSize / 2;
         const x = (segment.x * blockSize) + radius;
         const y = (segment.y * blockSize) + radius;
         ctx.beginPath();
-        ctx.arc(x, y, radius, 0, Math.PI * 2);
+        if (direction === 'up') {
+          ctx.arc(x, y + radius, radius, 0, Math.PI, true);
+        } else if (direction === 'down') {
+          ctx.arc(x, y - radius, radius, 0, Math.PI, false);  
+        } else if (direction === 'right') {
+          const startAngle = Math.PI * 1.5;
+          const endAngle = Math.PI * 0.5;
+          ctx.arc(x - radius, y, radius, startAngle, endAngle, false);
+        } else if (direction === 'left') {
+          const startAngle = Math.PI * 1.5;
+          const endAngle = Math.PI * 0.5;
+          ctx.arc(x + radius, y, radius, startAngle, endAngle, true);
+        }
         ctx.fill();
-        // let appleImg = new Image();
-        // ctx.drawImage(appleImg, apple.x * blockSize-7, apple.y * blockSize-7);
-    } else {
+      } else {
         // Рисование тела змеи
         ctx.fillRect(segment.x * blockSize, segment.y * blockSize, blockSize, blockSize);
         if (index>9){
@@ -146,8 +157,6 @@ function SnakeGame(){
   }, []);
 
   useEffect(() => {
-    // if (!ctx) return;
-
     const handleKeyDown = (event) => {
       const { keyCode } = event;
 
@@ -168,7 +177,7 @@ function SnakeGame(){
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
     };
-  }, [ctx, direction]);
+  }, [direction]);
 
   useEffect(() => {
     if (!ctx) return;
@@ -179,13 +188,13 @@ function SnakeGame(){
             moveSnake();
             checkCollision();
         }
-    }, 250);
+    }, speedGame);
     
     return () => {
         clearInterval(gameLoop);
     };
     
-  }, [ctx, gameStarted, moveSnake, checkCollision, draw ]);
+  });
 
   // Генерация яблока на поле
   const generateApple = () => {
@@ -217,37 +226,38 @@ function SnakeGame(){
   document.addEventListener("click", startGame);
 
   function startGameAgain() {
-    setGameWin(false);
-    setGameLoose(false);
-    setCount(9);
-    setDirection("up");
-    setSnake([
-        { x: 11, y: 12 },
-        { x: 11, y: 13 },
-        { x: 11, y: 14 },
-        { x: 11, y: 15 },
-        { x: 11, y: 16 },
-        { x: 11, y: 17 },
-        { x: 11, y: 18 },
-        { x: 11, y: 19 },
-        { x: 11, y: 20 },
-        { x: 11, y: 21 },
-        { x: 11, y: 20 },
-        { x: 12, y: 21 },
-        { x: 13, y: 21 },
-        { x: 14, y: 21 },
-        { x: 15, y: 21 },
-        { x: 16, y: 21 },
-        { x: 17, y: 21 },
-        { x: 17, y: 22 },
-        { x: 17, y: 23 },
-        { x: 17, y: 24 },
-        { x: 17, y: 25 },
-        { x: 17, y: 26 },
-        { x: 17, y: 27 },
-    ]);
-    setApple({ x: 11, y: 7 });
+    // setGameWin(false);
+    // setGameLoose(false);
+    // setCount(9);
+    // setDirection("up");
+    // setSnake([
+    //     { x: 11, y: 12 },
+    //     { x: 11, y: 13 },
+    //     { x: 11, y: 14 },
+    //     { x: 11, y: 15 },
+    //     { x: 11, y: 16 },
+    //     { x: 11, y: 17 },
+    //     { x: 11, y: 18 },
+    //     { x: 11, y: 19 },
+    //     { x: 11, y: 20 },
+    //     { x: 11, y: 21 },
+    //     { x: 11, y: 20 },
+    //     { x: 12, y: 21 },
+    //     { x: 13, y: 21 },
+    //     { x: 14, y: 21 },
+    //     { x: 15, y: 21 },
+    //     { x: 16, y: 21 },
+    //     { x: 17, y: 21 },
+    //     { x: 17, y: 22 },
+    //     { x: 17, y: 23 },
+    //     { x: 17, y: 24 },
+    //     { x: 17, y: 25 },
+    //     { x: 17, y: 26 },
+    //     { x: 17, y: 27 },
+    // ]);
+    // setApple({ x: 11, y: 7 });
     // setCtx(null);
+    window.location.reload()
   };
 
   return (
@@ -258,14 +268,14 @@ function SnakeGame(){
             width={canvasWidth}
             height={canvasHeight}
         />
-        {!gameStarted && <Button children='start game' primary startGame/>}
+        {!gameStarted && <Button textBtn='start game' primary startGame/>}
         {gameWin && <>
             <div className={s.game__message}>WELL DONE!</div>
-            <Button id='qwerty' children='play-again' playAgain/>
+            <Button id='qwerty' textBtn='play-again' playAgain/>
         </>}
         {gameLoose && <>
             <div className={s.game__message}>GAME OVER!</div>
-            <Button id='qwerty' children='start-again' playAgain/>
+            <Button id='qwerty' textBtn='start-again' playAgain/>
         </>}
     </div>
     </>
