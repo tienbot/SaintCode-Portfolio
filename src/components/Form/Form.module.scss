@@ -3,9 +3,13 @@
   flex-direction:column;
   width: 372px;
   height: 372px;
+<<<<<<< HEAD
   button {
     width: 146px;
   }
+=======
+  align-items: flex-start;
+>>>>>>> main
 }
 .label {
   margin-bottom:10px;
@@ -21,6 +25,7 @@
   border:1px solid #1E2D3D;
   min-height:41px;
   margin-bottom:24px;
+  width: 100%;
 
 
   &:hover,&:focus-visible {

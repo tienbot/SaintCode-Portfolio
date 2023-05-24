@@ -5,9 +5,11 @@ import s from './Button.module.css'
 export const Button = (props) => {
     const {
         className,
-        children,
+        textBtn,
         primary,
         ghost,
+        startGame,
+        playAgain
       } = props;
     
     //s.button - дефолтный класс кнопки
@@ -15,9 +17,11 @@ export const Button = (props) => {
         //дополнительные классы кнопки
         [s.button__primary]: primary,
         [s.button__ghost]: ghost,
+        [s.button__startGame]: startGame,
+        [s.button__playAgain]: playAgain,
     });
 
   return (
-        <button className={innerClassName}>{children}</button>
+        <button className={innerClassName}>{textBtn}</button>
   )
 }
