@@ -1,13 +1,15 @@
 .link {
   display:flex;
-  font-size: 16px;
+  align-items: center;
+  font-size: 1rem;
   line-height: 21px;
   border:none;
   color: #607B96;
+  margin-bottom:0.6rem;
   
   img {
-    width: 16.22px;
-    height: 14.6px;
-    margin-right: 8px;
+    width: 1rem;
+    height: 0.9rem;
+    margin-right: 0.5rem;
   }
 }
