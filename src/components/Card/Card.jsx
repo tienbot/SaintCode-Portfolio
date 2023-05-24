@@ -11,7 +11,7 @@ export const Card = ({ name, imageUrl, link, isVisible, index }) => {
     const iconsByProject = {
       'denis-novik': ['html', 'css'],
       'dodo-pizza': ['html', 'css'],
-      'emoji': ['js', 'css'],
+      '3dCard': ['js', 'css'],
       'emoji-react-app': ['react'],
       'harry-potter-js': ['js'],
       'maket': ['html', 'css'],

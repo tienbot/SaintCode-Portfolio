@@ -3,7 +3,7 @@ import s from './Check.module.sass';
 import { IconBW } from '../IconBW/IconBW';
 
 const icons = [
-  { key: 'react', alt: 'React', active: false, text: 'React', projects: ['emoji-react-app', 'react-first'] },
+  { key: 'react', alt: 'React', active: false, text: 'React', projects: ['emoji-react-app', 'react-first', '3dCard'] },
   { key: 'html', alt: 'HTML', active: false, text: 'HTML', projects: ['dodo-pizza', 'maket', 'order-card', 'restauraunt', 'vizit-cart'] },
   { key: 'css', alt: 'CSS', active: false, text: 'CSS', projects: ['dodo-pizza', 'maket', 'order-card', 'restauraunt', 'vizit-cart', 'emoji'] },
   { key: 'js', alt: 'Javascript', active: false, text: 'Javascript', projects: ['emoji', 'harry-potter-js', 'todo-list-js', 'weather-js'] },

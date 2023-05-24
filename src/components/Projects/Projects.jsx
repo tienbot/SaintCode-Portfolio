@@ -22,7 +22,7 @@ export const Projects = () => {
       });
   }, []);
 const filteredProjects = projects.filter((project) =>
-  checkedProjects.includes(project.name.toLowerCase())
+  checkedProjects.includes(project.name)
   );
   
   return (
@@ -44,7 +44,7 @@ const filteredProjects = projects.filter((project) =>
                 name={project.name}
                 imageUrl={project.owner.avatar_url}
                 link={project.html_url}
-                isVisible={checkedProjects.includes(project.name.toLowerCase())}
+                isVisible={checkedProjects.includes(project.name)}
                 index={index + 1} // Add the project index prop
             />
             ))}
