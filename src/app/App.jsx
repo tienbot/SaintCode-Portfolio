@@ -8,49 +8,50 @@ import { Contacts } from "../Pages/Contacts/Contacts";
 import About from "../Pages/About/About";
 import Info from "../components/info/Info";
 import personalInfo from "../components/info/personal_info";
+import { Projects } from "../components/Projects/Projects";
 
 function App() {
-  // const { title, description, content } = personalInfo;
+  // // const { title, description, content } = personalInfo;
 
-  // useRef for Info left div
-  const infoRef = useRef(null);
+  // // useRef for Info left div
+  // const infoRef = useRef(null);
 
-  // Array lines for Info left div content
-  const [infoLinesArr, setInfoLinesArr] = useState([]);
+  // // Array lines for Info left div content
+  // const [infoLinesArr, setInfoLinesArr] = useState([]);
 
-  // Dividing Info left div content into lines
-  useEffect(() => {
-    if (infoRef.current) {
-      let infoBoxWidth = infoRef.current.getBoundingClientRect().width;
+  // // Dividing Info left div content into lines
+  // useEffect(() => {
+  //   if (infoRef.current) {
+  //     let infoBoxWidth = infoRef.current.getBoundingClientRect().width;
 
-      // Width for one letter
-      let signWidth = 21;
+  //     // Width for one letter
+  //     let signWidth = 21;
 
-      const text = personalInfo.content;
-      let words = text.split(" ");
-      let currentLine = "";
-      let currentWidth = 0;
-      let updatedLine = [];
-      for (let i = 0; i < words.length; i++) {
-        let word = words[i];
-        let wordWidth = word.length * signWidth;
-        if (currentWidth + wordWidth <= infoBoxWidth) {
-          currentLine += word += " ";
-          currentWidth += wordWidth + signWidth;
-        } else {
-          updatedLine.push(currentLine);
-          currentLine = word += " ";
-          currentWidth = wordWidth + signWidth;
-        }
-      }
-      updatedLine.push(currentLine);
-      setInfoLinesArr(updatedLine);
-    }
-  }, []);
+  //     const text = personalInfo.content;
+  //     let words = text.split(" ");
+  //     let currentLine = "";
+  //     let currentWidth = 0;
+  //     let updatedLine = [];
+  //     for (let i = 0; i < words.length; i++) {
+  //       let word = words[i];
+  //       let wordWidth = word.length * signWidth;
+  //       if (currentWidth + wordWidth <= infoBoxWidth) {
+  //         currentLine += word += " ";
+  //         currentWidth += wordWidth + signWidth;
+  //       } else {
+  //         updatedLine.push(currentLine);
+  //         currentLine = word += " ";
+  //         currentWidth = wordWidth + signWidth;
+  //       }
+  //     }
+  //     updatedLine.push(currentLine);
+  //     setInfoLinesArr(updatedLine);
+  //   }
+  // }, []);
   return (
     <Layout>
       <Header />
-      <PageHello/>
+      {/* <PageHello/> */}
       {/* <About>
         <Info
           infoRef={infoRef}
@@ -59,6 +60,7 @@ function App() {
           title={personalInfo.title}
         />
       </About> */}
+      <Projects/>
       <Footer />
     </Layout>
   );

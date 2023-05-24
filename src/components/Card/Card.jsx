@@ -1,11 +1,12 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import img from './assets/img.jpeg'
 import s from './Card.module.css'
 import { Button } from '../Button/Button'
 import { IconColor } from '../IconColor/IconColor'
 import { IconBW} from '../IconBW/IconBW'
 
-export const Card = ({ name, imageUrl, link, isVisible}) => {
+export const Card = ({ name, imageUrl, link, isVisible, index }) => {
+  const [showCard, setShowCard] = useState(false);
  const getIconsByProjectName = (projectName) => {
     const iconsByProject = {
       'denis-novik': ['html', 'css'],
@@ -26,13 +27,20 @@ export const Card = ({ name, imageUrl, link, isVisible}) => {
   };
 
   const projectIcons = getIconsByProjectName(name);
+   useEffect(() => {
+    if (isVisible) {
+      setShowCard(true);
+    }
+  }, [isVisible]);
+
   if (!isVisible) {
     console.log(isVisible);
     return null; // Hide the card if it is not visible
   }
   return (
-    <div className={s.card}>
-     <h2 className={s.h2}>Projects <span className={s.span}>// _{name}</span></h2>
+    // <div className={s.card}>
+     <div className={`${s.card} ${showCard ? s.show : ''}`}>
+     <h2 className={s.h2}>Projects {index} <span className={s.span}>// _{name}</span></h2>
       <div className={s.card__top}>
         <img className={s.card__img} src={imageUrl} alt="изображение проекта" />
        <div className={s.iconsContainer}>
