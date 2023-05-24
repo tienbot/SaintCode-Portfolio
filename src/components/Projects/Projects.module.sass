@@ -9,11 +9,38 @@
     max-width: 1782px
     height: 100%
     padding: 0
+    display: flex
+    overflow: hidden
 .wrapper
-    // width: 311px
     width: 100%
     max-width: 311px
     height: 100%
-    border-right: 1px solid #1e2d3d  
-      
+    border-right: 1px solid #1e2d3d
+.content
+    width: 100%
+.border
+    border-top: 1px solid #1E2D3D
+    border-bottom: 1px solid #1E2D3D
+.card_div
+    padding: 115px 125px 170px 125px
+    height: 100%
+    width: 100%
+    overflow: auto
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+    grid-gap: 40px
+.card_div::-webkit-scrollbar 
+    width: 18.5px /* Set the width of the scrollbar */
+.card_div::-webkit-scrollbar-track 
+    background-color: #011627 /* Set the background color of the scrollbar track */
+    border: 1px solid #1E2D3D
 
+.card_div::-webkit-scrollbar-thumb 
+    background-color:#607B96 
+    border-radius: 4px
+    height:7px
+hr
+    border: none
+    border-top: 1px solid #1E2D3D
+    width: 100%
+    box-sizing: border-box
