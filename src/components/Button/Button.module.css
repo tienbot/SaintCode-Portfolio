@@ -4,6 +4,9 @@
 .button{
     padding: 10px 14px;
     height: 38px;
+
+    /* height: auto; */
+
     border-radius: 8px;
     text-align: center;
     border: none;

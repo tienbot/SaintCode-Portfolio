@@ -61,6 +61,7 @@ function App() {
         />
       </About> */}
       <Projects/>
+      {/* <Contacts/> */}
       <Footer />
     </Layout>
   );
