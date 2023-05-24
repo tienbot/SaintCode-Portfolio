@@ -52,7 +52,7 @@ export const Card = ({ name, imageUrl, link, isVisible, index }) => {
       <div className={s.card__bottom}>
         <p>{name}</p>
         <a href={link} target="_blank" rel="noopener noreferrer">
-          <Button children='view-project' />
+          <Button textBtn='view-project' />
         </a>
       </div>
 </div>
