@@ -3,7 +3,13 @@
   flex-direction:column;
   width: 372px;
   height: 372px;
+<<<<<<< HEAD
+  button {
+    width: 146px;
+  }
+=======
   align-items: flex-start;
+>>>>>>> main
 }
 .label {
   margin-bottom:10px;
@@ -14,7 +20,7 @@
   padding:10px 15px;
   border:none;
   color: #465E77;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 21px;
   border:1px solid #1E2D3D;
   min-height:41px;

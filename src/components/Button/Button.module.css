@@ -3,7 +3,11 @@
 
 .button{
     padding: 10px 14px;
+<<<<<<< HEAD
+    height: 38px;
+=======
     height: auto;
+>>>>>>> main
     border-radius: 8px;
     text-align: center;
     border: none;
