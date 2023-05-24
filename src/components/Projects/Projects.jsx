@@ -151,9 +151,10 @@ export const Projects = () => {
           <label className={s.labelText}>projects</label>
         </Toggle>
       </div>
-      <div className={s.border}>
-        {buttonXVisible && <ButtonX onClick={handleButtonXClick}>Clear All</ButtonX>}
-      </div>
+       <div className={s.border}>
+        <ButtonX />
+       </div>
+      <hr/>
       <div className={s.card_div}>
         {filteredProjects.map((project, index) => (
           <Card
@@ -161,8 +162,8 @@ export const Projects = () => {
             name={project.name}
             imageUrl={project.owner.avatar_url}
             link={project.html_url}
-            isVisible={true}
-            index={index + 1}
+            isVisible={checkedProjects.includes(project.name.toLowerCase())}
+            index={index + 1} // Add the project index prop
           />
         ))}
       </div>

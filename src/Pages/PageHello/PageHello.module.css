@@ -245,9 +245,9 @@
 }
 
 .snake{
-    width: '100%';
+    /* width: '100%';
     max-width: '238px'; 
-    height: '100%';
+    height: '100%'; */
     border-radius: 15px;
 }
 
