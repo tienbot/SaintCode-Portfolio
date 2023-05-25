@@ -12,7 +12,7 @@ export const Card = ({ name, imageUrl, link, hasPage, linkPage, isVisible, index
     // const iconsByProject = {
     //   'denis-novik': ['html', 'css'],
     //   'dodo-pizza': ['html', 'css'],
-    //   '3dCard': ['js', 'css'],
+    //   'Emoji': ['js', 'css'],
     //   'emoji-react-app': ['react'],
     //   'harry-potter-js': ['js'],
     //   'maket': ['html', 'css'],
@@ -81,19 +81,3 @@ export const Card = ({ name, imageUrl, link, hasPage, linkPage, isVisible, index
     // <div className={s.card}>
   );
 };
-// export const Card = () => {
-//   return (
-//     <div className={s.card}>
-//         <div className={s.card__top}>
-//             <img className={s.card__img} src={img} alt="изображение проекта" />
-//             <IconColor vue alt='icon'/>
-//         </div>
-//         <div className={s.card__bottom}>
-//             <p>Duis aute irure dolor in velit esse cillum dolore.</p>
-//             <Button textBtn='view-project' ghost/>
-//             <IconBW css active alt='icon'/>
-//             <IconBW vue active alt='icon'/>
-//         </div>
-//     </div>
-//   )
-// }
