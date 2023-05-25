@@ -66,7 +66,7 @@ export const Form = () => {
         value={message}
         onChange={handleMessageChange}
       ></textarea>
-      <Button children="submit-message" />
+      <Button textBtn="submit-message" />
     </form>
   );
 };

@@ -3,7 +3,7 @@
 
 .button{
     padding: 10px 14px;
-    height: 38px;
+    height: auto;
     border-radius: 8px;
     text-align: center;
     border: none;
@@ -32,7 +32,6 @@
 .button__ghost{
     background-color:transparent;
     outline: 1px solid rgba(255, 255, 255, 1);
-    width: unset;
 }
 
 .button__ghost:hover{
@@ -45,4 +44,19 @@
     bottom: 55px;
     left: 50%;
 	transform: translateX(-50%);
+}
+
+.button__playAgain{
+    position: absolute;
+    bottom: 55px;
+    left: 50%;
+	transform: translateX(-50%);
+    outline: none;
+    background-color:transparent;
+    width: max-content;
+}
+
+.button__playAgain:hover{
+    background: transparent;
+    color:#43D9AD;
 }

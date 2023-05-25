@@ -5,7 +5,7 @@ import s from "./HeaderText.module.scss";
 function HeaderText(props) {
   const { title, to } = props;
   return (
-    <NavLink to={to} activeClassName={s.active} className={s.HeaderText}>
+    <NavLink to={to} activeclassname={s.active} className={s.HeaderText}>
       {title}
     </NavLink>
   );

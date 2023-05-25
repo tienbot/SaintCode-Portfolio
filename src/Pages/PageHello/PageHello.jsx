@@ -11,7 +11,7 @@ import SnakeGame from "../../components/SnakeGame/SnakeGame";
 
 
 export const PageHello = () => {
-
+    //управление через кнопки на странице
     const handleKeyDown = (event) => {
         const { keyCode } = event;
         function clickButton(id){
@@ -21,8 +21,8 @@ export const PageHello = () => {
                     this.style.borderColor='#fff'
                     this.addEventListener('mouseout', function() {
                         this.style.borderColor='#1E2D3D'
-                      });
-                  });
+                    });
+                });
             }, 100)
             document.getElementById(id).style.borderColor='#fff'
         }
@@ -49,8 +49,9 @@ export const PageHello = () => {
                 <p className={s.pageHello__textSubtext}>&gt;Front-end developer</p>
             </div>
             <div className={s.pageHello__text_bottom}>
-                <p>&#47;&#47;complete the game to continue</p>
-                <p>&#47;&#47;you can also see it on my Github page</p>
+                <p className={s.desktop}>&#47;&#47;complete the game to continue</p>
+                <p className={s.desktop}>&#47;&#47;you can also see it on my Github page</p>
+                <p className={s.mobile}>&#47;&#47;find my profile on Github:</p>
                 <p><span className={s.blue}>const</span> <span className={s.green}>githubLink</span><span className={s.white}> = </span> 
                 <a className={s.pageHello__a} href="“https://github.com/example/url”">“https://github.com/example/url”</a>
                 </p>
@@ -99,7 +100,7 @@ export const PageHello = () => {
                             </div>
                         </div>
                     </div>
-                    <Button children='skip' ghost/>
+                    <Button textBtn='skip' ghost/>
                 </div>
 
                 <img className={s.bolt__UpLeft} src={boltUpLeft} alt="" />
@@ -107,10 +108,9 @@ export const PageHello = () => {
                 <img className={s.bolt__DownLeft} src={boltDownLeft} alt="" />
                 <img className={s.bolt__DownRight} src={boltDownRight} alt="" />
             </div>
-            <div className={s.blurGreen}></div>
-            <div className={s.blurBlue}></div>
-            
         </div>
+        <div className={s.blurGreen}></div>
+        <div className={s.blurBlue}></div>
     </main>
     );
 };
