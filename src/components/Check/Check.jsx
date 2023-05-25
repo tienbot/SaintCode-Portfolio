@@ -2,16 +2,29 @@ import React, { useState } from 'react';
 import s from './Check.module.sass';
 import { IconBW } from '../IconBW/IconBW';
 
+//Проекты Ильи
+// const icons = [
+//   { key: 'react', alt: 'React', active: false, text: 'React', projects: ['emoji-react-app', 'react-first', '3dCard'] },
+//   { key: 'html', alt: 'HTML', active: false, text: 'HTML', projects: ['dodo-pizza', 'maket', 'order-card', 'restauraunt', 'vizit-cart'] },
+//   { key: 'css', alt: 'CSS', active: false, text: 'CSS', projects: ['dodo-pizza', 'maket', 'order-card', 'restauraunt', 'vizit-cart', 'emoji'] },
+//   { key: 'js', alt: 'Javascript', active: false, text: 'Javascript', projects: ['emoji', 'harry-potter-js', 'todo-list-js', 'weather-js'] },
+//   { key: 'vue', alt: 'Vue', active: false, text: 'Vue' },
+//   { key: 'angular', alt: 'Angular', active: false, text: 'Angular' },
+//   { key: 'gatsby', alt: 'Gatsby', active: false, text: 'Gatsby' },
+//   { key: 'flutter', alt: 'Flutter', active: false, text: 'Flutter' },
+// ];
+
+//Проекты Саши
 const icons = [
-  { key: 'react', alt: 'React', active: false, text: 'React', projects: ['emoji-react-app', 'react-first', '3dCard'] },
-  { key: 'html', alt: 'HTML', active: false, text: 'HTML', projects: ['dodo-pizza', 'maket', 'order-card', 'restauraunt', 'vizit-cart'] },
-  { key: 'css', alt: 'CSS', active: false, text: 'CSS', projects: ['dodo-pizza', 'maket', 'order-card', 'restauraunt', 'vizit-cart', 'emoji'] },
-  { key: 'js', alt: 'Javascript', active: false, text: 'Javascript', projects: ['emoji', 'harry-potter-js', 'todo-list-js', 'weather-js'] },
-  { key: 'vue', alt: 'Vue', active: false, text: 'Vue' },
-  { key: 'angular', alt: 'Angular', active: false, text: 'Angular' },
-  { key: 'gatsby', alt: 'Gatsby', active: false, text: 'Gatsby' },
-  { key: 'flutter', alt: 'Flutter', active: false, text: 'Flutter' },
-];
+    { key: 'react', alt: 'React', active: false, text: 'React'},
+    { key: 'html', alt: 'HTML', active: false, text: 'HTML', projects: ['darkSlider', 'food'] },
+    { key: 'css', alt: 'CSS', active: false, text: 'CSS', projects: ['3dCard', 'darkSlider', 'gallery', 'beautifulWorld', 'food', 'architect', 'fairyForest'] },
+    { key: 'js', alt: 'Javascript', active: false, text: 'Javascript', projects: ['3dCard', 'gallery', 'beautifulWorld', 'food', 'fairyForest'] },
+    { key: 'vue', alt: 'Vue', active: false, text: 'Vue' },
+    { key: 'angular', alt: 'Angular', active: false, text: 'Angular' },
+    { key: 'gatsby', alt: 'Gatsby', active: false, text: 'Gatsby' },
+    { key: 'flutter', alt: 'Flutter', active: false, text: 'Flutter' },
+  ];
 
 export const Check = ({ setCheckedProjects }) => {
   const [checkedIcons, setCheckedIcons] = useState(icons);

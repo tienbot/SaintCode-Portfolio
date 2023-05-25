@@ -12,7 +12,6 @@ export const Projects = () => {
   const login = 'tienbot'
   useEffect(() => {
     // Выполните запрос к GitHub API, чтобы получить список проектов пользователя
-    // fetch('https://api.github.com/users/iliajuso/repos')
     fetch('https://api.github.com/users/'+login+'/repos')
       .then(response => response.json())
       .then(data => {
