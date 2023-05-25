@@ -1,7 +1,7 @@
 import style from "./About.module.css";
-import Info from "../../components/info/Info";
+import CodeSnippedBlock from "../../components/CodeSnipedBlock/CodeSnippedBlock";
 
-const About = ({ children }) => {
+const About = ({ codeSnippetArr, children }) => {
   return (
     <main className={style.main}>
       <div className={style.sidebar}></div>
@@ -14,6 +14,7 @@ const About = ({ children }) => {
       </div>
       <div className={style.right__content_wrapper}>
         <div className={style.content__title}></div>
+        <CodeSnippedBlock codeSnippetArr={codeSnippetArr} />
       </div>
     </main>
   );

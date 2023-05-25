@@ -11,15 +11,20 @@ export const Projects = () => {
   const [buttonXVisible, setButtonXVisible] = useState(false);
   const [buttonXText, setButtonXText] = useState('');
 
+    const login = 'iliajuso'
+  // const login = 'tienbot'
   useEffect(() => {
-    fetch('https://api.github.com/users/iliajuso/repos')
-
-      .then((response) => response.json())
-      .then((data) => {
-       setProjects(data);
+    // Выполните запрос к GitHub API, чтобы получить список проектов пользователя
+    // fetch('https://api.github.com/users/iliajuso/repos')
+    fetch('https://api.github.com/users/'+login+'/repos')
+      .then(response => response.json())
+      .then(data => {
+        // Сохраните полученные проекты в состояние
+        setProjects(data);
+        console.log(data);
       })
-      .catch((error) => {
-        console.error('Error fetching projects:', error);
+      .catch(error => {
+        console.error('Ошибка при получении проектов:', error);
       });
   }, []);
 
@@ -34,7 +39,7 @@ export const Projects = () => {
   };
 
   const filteredProjects = projects.filter((project) =>
-    checkedProjects.includes(project.name.toLowerCase())
+    checkedProjects.includes(project.name)
   )
 
   return (
@@ -50,19 +55,20 @@ export const Projects = () => {
       {/* <hr/> */}
       <div className={s.card_div}>
         {filteredProjects.map((project, index) => (
-          <Card
-            key={project.id}
-            name={project.name}
-            imageUrl={project.owner.avatar_url}
-            link={project.html_url}
-            isVisible={checkedProjects.includes(project.name.toLowerCase())}
-            index={index + 1} // Add the project index prop
-          />
+          <Card 
+                key = { project.id }
+                name={project.name}
+                imageUrl={project.owner.avatar_url}
+                // imageUrl={project.html_url+'/blob/main/preview/preview.jpg?raw=true'}
+                link={project.html_url}
+                hasPage = {project.has_pages}
+                linkPage={'https://'+login+'.github.io/'+project.name}
+                isVisible={checkedProjects.includes(project.name)}
+                index={index + 1} // Add the project index prop
+            />
         ))}
 
-      </div>
+</div>
     </main>
   );
 };
-
-
