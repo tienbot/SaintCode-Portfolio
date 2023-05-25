@@ -7,7 +7,6 @@ import { ButtonX } from '../ButtonX/ButtonX'
 export const Projects = () => {
   const [projects, setProjects] = useState([]);
   const [checkedProjects, setCheckedProjects] = useState([]);
-  // const [projectCounter, setProjectCounter] = useState(1);
 //   const login = 'iliajuso'
   const login = 'tienbot'
   useEffect(() => {
@@ -23,8 +22,8 @@ export const Projects = () => {
         console.error('Ошибка при получении проектов:', error);
       });
   }, []);
-const filteredProjects = projects.filter((project) =>
-  checkedProjects.includes(project.name)
+  const filteredProjects = projects.filter((project) =>
+    checkedProjects.includes(project.name)
   );
   
   return (
@@ -38,7 +37,6 @@ const filteredProjects = projects.filter((project) =>
         <div className={s.border}>
             <ButtonX />
         </div>
-        {/* <hr/> */}
         <div className={s.card_div}>
             {filteredProjects.map((project, index) => (
             <Card

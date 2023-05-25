@@ -28,7 +28,6 @@ const icons = [
 
 export const Check = ({ setCheckedProjects }) => {
   const [checkedIcons, setCheckedIcons] = useState(icons);
-  const [selectedProject, setSelectedProject] = useState(null)
   console.log(checkedIcons)
 //  const handleCheckboxChange = (key) => {
 //     setCheckedIcons((prevIcons) =>

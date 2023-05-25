@@ -5,7 +5,7 @@ import Snippet from "../Snippet/Snippet.jsx";
 const CodeSnippedBlock = ({ codeSnippetArr }) => {
   return (
     <div className={s.wrapper}>
-      // Code snippet showcase:
+      &#47;&#47; Code snippet showcase:
       {codeSnippetArr.map((elem) => {
         console.log(elem);
         return <Snippet />;
