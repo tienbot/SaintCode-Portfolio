@@ -81,7 +81,7 @@
 .content::-moz-scrollbar-thumb:hover {
   filter: brightness(150%);
 }
-.left__content_wrapper::-ms-scrollbar-thumb:hover {
+.content::-ms-scrollbar-thumb:hover {
   filter: brightness(150%);
 }
 .span {
