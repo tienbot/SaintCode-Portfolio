@@ -67,3 +67,8 @@
 .card.show {
     opacity: 1;
 }
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    gap:10px
+}

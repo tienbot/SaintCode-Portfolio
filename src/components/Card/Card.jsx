@@ -7,9 +7,11 @@ import { IconColor } from '../IconColor/IconColor'
 export const Card = ({ name, imageUrl, link, hasPage, linkPage, isVisible, index }) => {
   const [showCard, setShowCard] = useState(false);
  const getIconsByProjectName = (projectName) => {
+    
+    //проекты Ильи
     const iconsByProject = {
       'denis-novik': ['html', 'css'],
-      'Dodo-Pizza': ['html', 'css'],
+      'dodo-pizza': ['html', 'css'],
       'Emoji': ['js', 'css'],
       'emoji-react-app': ['react'],
       'harry-potter-js': ['js'],
@@ -21,6 +23,17 @@ export const Card = ({ name, imageUrl, link, hasPage, linkPage, isVisible, index
       'vizit-cart': ['html', 'css'],
       'weather-js': ['js']
     };
+
+    //проекты Саши
+    // const iconsByProject = {
+    //     '3dCard': ['css', 'js'],
+    //     'darkSlider': ['html', 'css'],
+    //     'gallery': ['css', 'js'],
+    //     'beautifulWorld': ['css', 'js'],
+    //     'food': ['html', 'css', 'js'],
+    //     'architect': ['css'],
+    //     'fairyForest': ['css', 'js'],
+    //   };
 
     return iconsByProject[projectName] || [];
   };

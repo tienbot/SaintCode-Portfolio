@@ -15,7 +15,6 @@ export const Projects = () => {
   // const login = 'tienbot'
   useEffect(() => {
     // Выполните запрос к GitHub API, чтобы получить список проектов пользователя
-    // fetch('https://api.github.com/users/iliajuso/repos')
     fetch('https://api.github.com/users/'+login+'/repos')
       .then(response => response.json())
       .then(data => {
@@ -41,7 +40,6 @@ export const Projects = () => {
   const filteredProjects = projects.filter((project) =>
     checkedProjects.includes(project.name)
   )
-
   return (
     <main className={s.main}>
       <div className={s.wrapper}>
@@ -49,26 +47,26 @@ export const Projects = () => {
           <label className={s.labelText}>projects</label>
         </Toggle>
       </div>
-<div className={s.border}>
-        {buttonXVisible && <ButtonX onClick={handleButtonXClick}>{buttonXText}</ButtonX>}
-      </div>
-      {/* <hr/> */}
-      <div className={s.card_div}>
-        {filteredProjects.map((project, index) => (
-          <Card 
-                key = { project.id }
-                name={project.name}
-                imageUrl={project.owner.avatar_url}
-                // imageUrl={project.html_url+'/blob/main/preview/preview.jpg?raw=true'}
-                link={project.html_url}
-                hasPage = {project.has_pages}
-                linkPage={'https://'+login+'.github.io/'+project.name}
-                isVisible={checkedProjects.includes(project.name)}
-                index={index + 1} // Add the project index prop
-            />
-        ))}
-
-</div>
+    <div className={s.wrapperCards}>
+        <div className={s.border}>
+            {buttonXVisible && <ButtonX onClick={handleButtonXClick}>{buttonXText}</ButtonX>}
+        </div>
+        <div className={s.card_div}>
+            {filteredProjects.map((project, index) => (
+            <Card 
+                    key = { project.id }
+                    name={project.name}
+                    imageUrl={project.owner.avatar_url}
+                    // imageUrl={project.html_url+'/blob/main/preview/preview.jpg?raw=true'}
+                    link={project.html_url}
+                    hasPage = {project.has_pages}
+                    linkPage={'https://'+login+'.github.io/'+project.name}
+                    isVisible={checkedProjects.includes(project.name)}
+                    index={index + 1} // Add the project index prop
+                />
+            ))}
+        </div>
+    </div>
     </main>
   );
 };
