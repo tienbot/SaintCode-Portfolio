@@ -8,10 +8,12 @@ export const Projects = () => {
   const [projects, setProjects] = useState([]);
   const [checkedProjects, setCheckedProjects] = useState([]);
   // const [projectCounter, setProjectCounter] = useState(1);
+//   const login = 'iliajuso'
+  const login = 'tienbot'
   useEffect(() => {
     // Выполните запрос к GitHub API, чтобы получить список проектов пользователя
-    fetch('https://api.github.com/users/iliajuso/repos')
-    // fetch('https://api.github.com/users/tienbot/repos')
+    // fetch('https://api.github.com/users/iliajuso/repos')
+    fetch('https://api.github.com/users/'+login+'/repos')
       .then(response => response.json())
       .then(data => {
         // Сохраните полученные проекты в состояние
@@ -43,9 +45,11 @@ const filteredProjects = projects.filter((project) =>
             <Card
                 key={project.id}
                 name={project.name}
-                imageUrl={project.owner.avatar_url}
-                // imageUrl={project.html_url+'/blob/main/preview/preview.jpg?raw=true'}
+                // imageUrl={project.owner.avatar_url}
+                imageUrl={project.html_url+'/blob/main/preview/preview.jpg?raw=true'}
                 link={project.html_url}
+                hasPage = {project.has_pages}
+                linkPage={'https://'+login+'.github.io/'+project.name}
                 isVisible={checkedProjects.includes(project.name)}
                 index={index + 1} // Add the project index prop
             />

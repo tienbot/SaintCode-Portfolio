@@ -1,11 +1,10 @@
 import React, {useEffect, useState} from 'react'
-import img from './assets/img.jpeg'
+// import img from './assets/img.jpeg'
 import s from './Card.module.css'
 import { Button } from '../Button/Button'
 import { IconColor } from '../IconColor/IconColor'
-import { IconBW} from '../IconBW/IconBW'
 
-export const Card = ({ name, imageUrl, link, isVisible, index }) => {
+export const Card = ({ name, imageUrl, link, hasPage, linkPage, isVisible, index }) => {
   const [showCard, setShowCard] = useState(false);
  const getIconsByProjectName = (projectName) => {
     const iconsByProject = {
@@ -37,10 +36,11 @@ export const Card = ({ name, imageUrl, link, isVisible, index }) => {
     console.log(isVisible);
     return null; // Hide the card if it is not visible
   }
+
   return (
     <div className="">
         <div className="">
-            <h2 className={s.h2}>Projects {index} <span className={s.span}>// _{name}</span></h2>
+            <h2 className={s.h2}>Projects {index} <span className={s.span}>&#47;&#47; _{name}</span></h2>
         </div>
         <div className={`${s.card} ${showCard ? s.show : ''}`}>
      
@@ -54,9 +54,14 @@ export const Card = ({ name, imageUrl, link, isVisible, index }) => {
             </div>
             <div className={s.card__bottom}>
                 <p>{name}</p>
-                <a href={link} target="_blank" rel="noopener noreferrer">
-                    <Button textBtn='view-project' />
-                </a>
+                <div className={s.buttons}>
+                    <a href={link} target="_blank" rel="noopener noreferrer">
+                        <Button textBtn='view-project' />
+                    </a>
+                    {hasPage && <a href={linkPage} target="_blank" rel="noopener noreferrer">
+                        <Button textBtn='view-site' ghost />
+                    </a>}
+                </div>
             </div>
         </div>
     </div>
