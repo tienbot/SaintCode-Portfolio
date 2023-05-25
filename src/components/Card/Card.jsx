@@ -7,20 +7,33 @@ import { IconColor } from '../IconColor/IconColor'
 export const Card = ({ name, imageUrl, link, hasPage, linkPage, isVisible, index }) => {
   const [showCard, setShowCard] = useState(false);
  const getIconsByProjectName = (projectName) => {
+    
+    //проекты Ильи
+    // const iconsByProject = {
+    //   'denis-novik': ['html', 'css'],
+    //   'dodo-pizza': ['html', 'css'],
+    //   'Emoji': ['js', 'css'],
+    //   'emoji-react-app': ['react'],
+    //   'harry-potter-js': ['js'],
+    //   'maket': ['html', 'css'],
+    //   'order-card': ['html', 'css'],
+    //   'react-first': ['react'],
+    //   'restauraunt': ['css', 'html'],
+    //   'todo-list-js': ['js'],
+    //   'vizit-cart': ['html', 'css'],
+    //   'weather-js': ['js']
+    // };
+
+    //проекты Саши
     const iconsByProject = {
-      'denis-novik': ['html', 'css'],
-      'Dodo-Pizza': ['html', 'css'],
-      'Emoji': ['js', 'css'],
-      'emoji-react-app': ['react'],
-      'harry-potter-js': ['js'],
-      'maket': ['html', 'css'],
-      'order-card': ['html', 'css'],
-      'react-first': ['react'],
-      'restauraunt': ['css', 'html'],
-      'todo-list-js': ['js'],
-      'vizit-cart': ['html', 'css'],
-      'weather-js': ['js']
-    };
+        '3dCard': ['css', 'js'],
+        'darkSlider': ['html', 'css'],
+        'gallery': ['css', 'js'],
+        'beautifulWorld': ['css', 'js'],
+        'food': ['html', 'css', 'js'],
+        'architect': ['css'],
+        'fairyForest': ['css', 'js'],
+      };
 
     return iconsByProject[projectName] || [];
   };

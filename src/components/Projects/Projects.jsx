@@ -15,7 +15,6 @@ export const Projects = () => {
   // const login = 'tienbot'
   useEffect(() => {
     // Выполните запрос к GitHub API, чтобы получить список проектов пользователя
-    // fetch('https://api.github.com/users/iliajuso/repos')
     fetch('https://api.github.com/users/'+login+'/repos')
       .then(response => response.json())
       .then(data => {
@@ -41,7 +40,6 @@ export const Projects = () => {
   const filteredProjects = projects.filter((project) =>
     checkedProjects.includes(project.name)
   )
-
   return (
     <main className={s.main}>
       <div className={s.wrapper}>
@@ -57,6 +55,7 @@ export const Projects = () => {
         {filteredProjects.map((project, index) => (
           <Card 
                 key = { project.id }
+
                 name={project.name}
                 imageUrl={project.owner.avatar_url}
                 // imageUrl={project.html_url+'/blob/main/preview/preview.jpg?raw=true'}
