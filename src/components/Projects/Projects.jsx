@@ -21,6 +21,8 @@ export const Projects = () => {
         // Сохраните полученные проекты в состояние
         setProjects(data);
         console.log(data);
+        const initialCheckedProjects = data.map(project => project.name);
+        setCheckedProjects(initialCheckedProjects);
       })
       .catch(error => {
         console.error('Ошибка при получении проектов:', error);
@@ -47,8 +49,8 @@ export const Projects = () => {
           <label className={s.labelText}>projects</label>
         </Toggle>
       </div>
-    <div className={s.wrapperCards}>
-        <div className={s.border}>
+      <div className={s.wrapperCards}>
+       <div className={s.border}>
             {buttonXVisible && <ButtonX onClick={handleButtonXClick}>{buttonXText}</ButtonX>}
         </div>
         <div className={s.card_div}>
@@ -69,4 +71,38 @@ export const Projects = () => {
     </div>
     </main>
   );
+//   return (
+//   <main className={s.main}>
+//     <div className={s.wrapper}>
+//       <Toggle dropdownContent={<Check setCheckedProjects={handleCheckedProjectsChange} setButtonXText={setButtonXText} setButtonXVisible={setButtonXVisible} />}>
+//         <label className={s.labelText}>projects</label>
+//       </Toggle>
+//     </div>
+
+//     <div className={s.wrapperCards}>
+//       {buttonXVisible && <ButtonX onClick={handleButtonXClick}>{buttonXText}</ButtonX>}
+      
+//       <div className={s.cardsContainer}>
+//         <div className={s.border}>
+//           {/* Existing code for buttonXVisible condition */}
+//         </div>
+//         <div className={s.card_div}>
+//           {filteredProjects.map((project, index) => (
+//             <Card 
+//               key={project.id}
+//               name={project.name}
+//               imageUrl={project.owner.avatar_url}
+//               // imageUrl={project.html_url+'/blob/main/preview/preview.jpg?raw=true'}
+//               link={project.html_url}
+//               hasPage={project.has_pages}
+//               linkPage={'https://'+login+'.github.io/'+project.name}
+//               isVisible={checkedProjects.includes(project.name)}
+//               index={index + 1} // Add the project index prop
+//             />
+//           ))}
+//         </div>
+//       </div>
+//     </div>
+//   </main>
+// );
 };
