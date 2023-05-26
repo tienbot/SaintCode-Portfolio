@@ -67,3 +67,13 @@
 .card.show {
     opacity: 1;
 }
+.buttons{
+    display: flex;
+    /* justify-content: space-between; */
+    gap:10px
+}
+@media (max-width: 720px) {
+    .card__bottom {
+    padding: 24px 15px 32px 15px;
+}
+}
