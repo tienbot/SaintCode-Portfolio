@@ -272,6 +272,9 @@
     .pageHello__game{
         display: none;
     }
+    .blurBlue{
+        top: 200px;
+    }
 }
 
 @media screen and (max-width: 540px) {

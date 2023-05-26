@@ -7,11 +7,14 @@
   height: 48px;
 }
 .user {
+    display: flex;
 }
 .avatar {
   display: block;
   width: 36px;
   height: 36px;
+  border-radius:100%;
+  margin-right: 10px;
 }
 .title {
   width: 150px;
@@ -23,7 +26,7 @@
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
-  line-height: 18px;
+  /* line-height: 18px; */
   color: #5565e8;
 }
 .ago {
