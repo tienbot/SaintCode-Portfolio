@@ -45,6 +45,7 @@ export const Projects = () => {
   return (
     <main className={s.main}>
       <div className={s.wrapper}>
+        <p className={s.mobileTitle}>_projects</p>
         <Toggle dropdownContent={<Check setCheckedProjects={handleCheckedProjectsChange} setButtonXText={setButtonXText} setButtonXVisible={setButtonXVisible} />}>
           <label className={s.labelText}>projects</label>
         </Toggle>

@@ -30,13 +30,30 @@
     opacity: 0
     transform: translateY(-10px)
     transition: opacity 0.3s ease, transform 0.3s ease
+    display: none
 .dropdown.show 
     opacity: 1
     transform: translateY(0)
+    display: block
+
+
+
+// .mobileTitle
+//     display: none
+//     color: #fff
+
+
 @media ( max-width: 576px )
+    .containerStyle
+        margin-bottom: 38px
+        width: calc(100vw - 32px)
     .checkbox
         border-bottom: none
-    
+        width: 100%
+        background: #1E2D3D
+        padding-left: 24px
+    // .mobileTitle
+    //     display: block
 
 
 

@@ -14,7 +14,7 @@ export const Toggle = ({ arrowStyle, containerStyle, dropdownContent, children }
   };
 
   return (
-    <div className={containerStyle}>
+    <div className={s.containerStyle}>
       
       <label className={`${s.checkbox}`}>
         <input
