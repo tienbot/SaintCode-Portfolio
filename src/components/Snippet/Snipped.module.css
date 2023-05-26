@@ -12,6 +12,7 @@
   display: block;
   width: 36px;
   height: 36px;
+  border-radius: 50%;
 }
 .title {
   width: 150px;
@@ -44,10 +45,10 @@
 }
 .content {
   width: 100%;
-  background: #011221;
-  border: 1px solid #1e2d3d;
+  /* background: #011221; */
+  /* border: 1px solid #1e2d3d;
   border-radius: 15px;
-  padding: 24px 30px;
+  padding: 12px 15px; */
 }
 .description {
   display: flex;

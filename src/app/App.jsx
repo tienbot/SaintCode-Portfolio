@@ -49,13 +49,12 @@ function App() {
     }
   }, []);
   useEffect(() => {
-    fetch("https://api.github.com/repos/tienbot/SaintCode-Portfolio/contents")
+    fetch("https://api.github.com/users/minakli/gists")
       .then((response) => response.json())
       .then((data) => {
         setCodeSnippetArr(data);
       })
       .catch((error) => {
-        // Обработка ошибок
         console.error(error);
       });
   }, []);

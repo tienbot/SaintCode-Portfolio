@@ -1,6 +1,6 @@
 import s from "./CodeSnippetBlock.module.css";
 import Snippet from "../Snippet/Snippet.jsx";
-// import codeSnippetArr from "../../app/App.jsx"
+import ReactEmbedGist from "react-embed-gist";
 
 const CodeSnippedBlock = ({ codeSnippetArr }) => {
   return (
@@ -8,7 +8,26 @@ const CodeSnippedBlock = ({ codeSnippetArr }) => {
       // Code snippet showcase:
       {codeSnippetArr.map((elem) => {
         console.log(elem);
-        return <Snippet />;
+        console.log("minakli/" + elem.id);
+        return (
+          <Snippet key={Math.random()} elem={elem}>
+            <ReactEmbedGist
+              gist={"minakli/" + elem.id}
+              // wrapperClass="gist__bash"
+              wrapperClass={s.wrapperclass}
+              loadingClass="loading__screen"
+              // titleClass="gist__title"
+              titleClass={s.titleclass}
+              errorClass="gist__error"
+              // contentClass="gist__content"
+              contentClass={s.contentclass}
+              file={elem[Object.keys(elem)[0]].filename}
+              loadingFallback={<p></p>}
+              key={Math.random()}
+              gistClass={s.gist}
+            />
+          </Snippet>
+        );
       })}
     </div>
   );
