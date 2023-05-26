@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import s from "./Toogle.module.sass"
-import s2 from "./ToggleTwo.module.sass";
 
 export const Toggle = ({ arrowStyle, containerStyle, dropdownContent, children }) => {
   const [isChecked, setIsChecked] = useState(false);
