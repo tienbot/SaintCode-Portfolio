@@ -1,3 +1,4 @@
+// $buttonXVisible: true
 .labelText
     font-family: Fira Code
     font-size: 16px
@@ -10,15 +11,24 @@
     height: 100%
     padding: 0
     display: flex
+    overflow: hidden
 .wrapper
     width: 100%
     max-width: 311px
     height: 100%
     border-right: 1px solid #1e2d3d
+.wrapperCards
+    width: 100%
+    
+.content
+    width: 100%
+.border
+    border-top: 1px solid #1E2D3D
+    border-bottom: 1px solid #1E2D3D
 .card_div
-    padding: 191px 125px 0px 125px
+    padding: 115px 125px 170px 125px
     height: 100%
-    width: 1445px
+    width: 100%
     overflow: auto
     display: grid
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
@@ -34,4 +44,36 @@
     border-radius: 4px
     height:7px
 
+@media (max-width:960px)
+    .card_div
+        justify-content: center
+        padding: 100px 60px 100px 95px
+@media (max-width:720px)
+    .card_div
+        padding: 80px 40px 100px 66px      
+@media (max-width:600px)
+    .card_div
+        padding: 60px 15px 80px 15px 
+@media (max-width:576px)
+    .main
+        flex-direction: column 
+        overflow: auto
+    .wrapper
+        border-right: none
+    .border
+        border-top: none
+        border-bottom: none 
+    .card_div
+        padding-top:60px
 
+//   .wrapperCards 
+//         width: 100%
+//         display: flex
+//         flex-direction: column
+//         align-items: flex-start
+
+
+    // .cardsContainer 
+    //     // display: ${buttonXVisible ? 'block' : 'none'}
+    //     display: #{if($buttonXVisible, 'block', 'none')}
+    //     margin-top: 20px

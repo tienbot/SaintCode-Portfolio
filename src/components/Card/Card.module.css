@@ -5,7 +5,6 @@
     max-width: 370.35px;
     border-radius: 15px;
     overflow: hidden;
-    height: 315px;
 }
 
 .card__top{
@@ -32,6 +31,11 @@
     font-size: 18px;
     color: #607B96;
 }
+.card__bottom .buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
 .h2{
     font-family: Fira Code;
     font-size: 16px;
@@ -47,4 +51,29 @@
     line-height: 21px;
     color:#607B96;
     white-space: nowrap;
+}
+.iconsContainer {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display:flex;
+    gap:5px
+}
+.card {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.card.show {
+    opacity: 1;
+}
+.buttons{
+    display: flex;
+    /* justify-content: space-between; */
+    gap:10px
+}
+@media (max-width: 720px) {
+    .card__bottom {
+    padding: 24px 15px 32px 15px;
+}
 }

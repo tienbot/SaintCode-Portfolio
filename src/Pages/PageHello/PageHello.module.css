@@ -14,10 +14,11 @@
     flex-direction: column;
     justify-content: space-between;
     height: 304px;
+    z-index: 10;
 }
 
 .pageHello__textSuptext{
-    font-weight: 450;
+    font-weight: 400;
     font-size: 18px;
     line-height: 24px;
     color: #E5E9F0;
@@ -45,6 +46,10 @@
     line-height: 21px;
     color: #607B96;
     margin-bottom: 9.6px;
+}
+
+.pageHello__text_bottom .mobile{
+    display: none;
 }
 
 .pageHello__a {
@@ -207,8 +212,8 @@
     position: absolute;
     width: 454px;
     height: 492px;
-    top: -30px;
-    right: 50px;
+    top: 130px;
+    right: 250px;
     background: #43D9AD;
     opacity: 0.4;
     filter: blur(87px);
@@ -218,8 +223,8 @@
     position: absolute;
     width: 454px;
     height: 492px;
-    top: 136.65px;
-    right: -80px;
+    top: 250px;
+    right: 170px;
     scale: 0.8;
     background: #4D5BCE;
     opacity: 0.4;
@@ -240,8 +245,85 @@
 }
 
 .snake{
-    width: '100%';
+    /* width: '100%';
     max-width: '238px'; 
-    height: '100%';
+    height: '100%'; */
     border-radius: 15px;
+}
+
+.game__message{
+    background-color: rgba(1, 22, 39, 0.84);
+    position: absolute;
+    bottom: 93px;
+    left: 50%;
+	transform: translateX(-50%);
+    text-transform: uppercase;
+    width: 100%;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#43D9AD;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 960px) {
+    .pageHello__game{
+        display: none;
+    }
+    .blurBlue{
+        top: 200px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .pageHello{
+        align-items: flex-start;
+    }
+
+    .pageHello__text{
+        height: 460px;
+    }
+
+    .pageHello__textSuptext{
+        margin-top: 69px;
+        margin-bottom: 10px;
+    }
+
+    .pageHello__h1{
+        line-height: 100%;
+        margin-bottom: 5px;
+    }
+
+    .pageHello__textSubtext{
+        font-size: 20px;
+        line-height: 26px;
+        color: #43D9AD;
+    }
+
+    .pageHello__text_bottom .desktop{
+        display: none;
+    }
+    
+    .pageHello__text_bottom .mobile{
+        display: block;
+        margin-bottom: 16px;
+    }
+
+    .pageHello__text_bottom p, .pageHello__a{
+        font-size: 14px;
+        line-height: 140%;
+    }
+
+    .blurGreen{
+        scale: 0.5;
+        right: -10px;
+        top: 80px;
+    }
+    .blurBlue{
+        scale: 0.5;
+        right: -85px;
+        top: 170px;
+    }
 }

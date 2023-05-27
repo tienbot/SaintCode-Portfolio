@@ -1,0 +1,33 @@
+.divButton
+    display: flex
+    justify-content: space-between
+    align-items: center
+    gap: 52px
+    min-width: 150px
+    width: min-content
+    height: 42px
+    border-right: 1px solid #1E2D3D
+    padding: 0 12px 0 14px
+.button
+    display: flex
+    align-items: center
+    border: none
+    background-color: transparent
+    width: 18px
+    &:hover
+        cursor: pointer
+.img
+    height: 9.6px
+    width: 9.6px
+    transform: rotate(90deg)
+.text
+    font-family: Fira Code
+    font-size: 16px
+    font-weight: 400
+    line-height: 21px
+    color: #607B96
+    margin-left: 6px
+    white-space: nowrap
+@media (max-width: 576px)
+    .divButton
+        border-right: none   

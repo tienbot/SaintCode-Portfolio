@@ -32,7 +32,8 @@ const Snippet = ({ elem, children }) => {
       <div className={s.description}>
         <p className={s.text}></p>
         <button className={s.close__btn}></button>
-      </div>
+      </div>{" "}
+      */
     </div>
   );
 };

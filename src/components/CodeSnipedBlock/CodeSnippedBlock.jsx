@@ -3,9 +3,10 @@ import Snippet from "../Snippet/Snippet.jsx";
 import ReactEmbedGist from "react-embed-gist";
 
 const CodeSnippedBlock = ({ codeSnippetArr }) => {
+  console.log(codeSnippetArr);
   return (
     <div className={s.wrapper}>
-      // Code snippet showcase:
+      &#47;&#47; Code snippet showcase:
       {codeSnippetArr.map((elem) => {
         console.log(elem);
         console.log("minakli/" + elem.id);
