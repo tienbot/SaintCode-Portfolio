@@ -33,7 +33,6 @@ const Info = ({ title, description, content, infoRef, infoLinesArr }) => {
 
                 <span className={s.line__elem}>*&nbsp;</span>
               </span>
-              {line}
             </p>
           );
         })}

@@ -10,10 +10,10 @@ const Snippet = ({ elem, children }) => {
             height="36"
             className={s.avatar}
             alt="Avatar"
-            src={elem.owner.avatar_url}
+            src={elem.owner?.avatar_url}
           />
           <div className={s.title}>
-            <p className={s.name}>{elem.owner.login}</p>
+            <p className={s.name}>{elem?.owner?.login}</p>
             <p className={s.ago}></p>
           </div>
         </div>

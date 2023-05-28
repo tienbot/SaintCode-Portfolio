@@ -48,11 +48,12 @@ function App() {
     }
   }, []);
   useEffect(() => {
-    fetch("https://api.github.com/users/minakli/gists")
+    fetch("https://api.github.com/users/Minakli/gists")
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         setCodeSnippetArr(data);
+        console.log(data);
+        console.log(codeSnippetArr);
       })
       .catch((error) => {
         console.error(error);
