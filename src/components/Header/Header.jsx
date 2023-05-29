@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
-import s from './Header.module.scss';
-import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import HeaderText from '../HeaderText/HeaderText';
-import TextComponent from '../TextComponent/TextComponent';
-import { PageHello } from '../../Pages/PageHello/PageHello';
+import s from "./Header.module.scss";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import HeaderText from "../HeaderText/HeaderText";
+import TextComponent from "../TextComponent/TextComponent";
+import { PageHello } from "../../Pages/PageHello/PageHello";
 import About from "../../Pages/About/About";
 import { Projects } from "../../components/Projects/Projects";
 import { Contacts } from "../../Pages/Contacts/Contacts";
@@ -17,17 +17,18 @@ export const Header = () => {
     const [codeSnippetArr, setCodeSnippetArr] = useState([]);
     const [nav, setNav] = useState(true); //add Zhazgul21, что то работает некорректно
 
-    useEffect(() => {
-        fetch("https://api.github.com/repos/tienbot/SaintCode-Portfolio/contents")
-          .then((response) => response.json())
-          .then((data) => {
-            setCodeSnippetArr(data);
-          })
-          .catch((error) => {
-            // Обработка ошибок
-            console.error(error);
-          });
-      }, []);
+
+  useEffect(() => {
+    fetch("https://api.github.com/repos/tienbot/SaintCode-Portfolio/contents")
+      .then((response) => response.json())
+      .then((data) => {
+        setCodeSnippetArr(data);
+      })
+      .catch((error) => {
+        // Обработка ошибок
+        console.error(error);
+      });
+  }, []);
 
   return (
     <Router>
@@ -70,10 +71,11 @@ export const Header = () => {
                     content={personalInfo.content}
                 />
             </About>
-        }/>
-        <Route path="/projects" component={Projects} element={<Projects/>}/>
-        <Route path="/contacts" component={Contacts} element={<Contacts/>}/>
-      </Routes>
+          }
+        />
+        <Route path="/projects" component={Projects} element={<Projects />} />
+        <Route path="/contacts" component={Contacts} element={<Contacts />} />
+      </Routes> */}
     </Router>
   );
 };
