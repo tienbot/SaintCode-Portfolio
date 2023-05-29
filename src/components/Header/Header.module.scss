@@ -55,10 +55,39 @@ a[class='HeaderText_HeaderText__LzOpA active']{
     margin-bottom:-3px;
 }
 
+// начало добавленного кода от Zhazgul21
+.burger_btn{
+  display: none;
+  color: #607B96;
+}
+@media (max-width: 960px) {
+  .burger_btn{
+    display: block;
+    position: fixed;
+    right: 40px;
+    top: 50px;
+  }
+  .nav{
+    display: none;
+  }
+  .header
+    .wrapName{
+      border: none;
+    }
+
+}
+//конец добавленного кода от Zhazgul21
+
+
 @media screen and (max-width: 540px) {
     a[class='HeaderText_HeaderText__LzOpA active']{
         color: #607B96;
         border-bottom: unset;
         margin-bottom: unset;
+    }
+
+    // add Zhazgul21
+    .burger_btn{
+      top: 35px;
     }
 }
