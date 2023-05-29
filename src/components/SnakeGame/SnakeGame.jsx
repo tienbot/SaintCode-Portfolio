@@ -271,11 +271,11 @@ function SnakeGame(){
         {!gameStarted && <Button textBtn='start game' primary startGame/>}
         {gameWin && <>
             <div className={s.game__message}>WELL DONE!</div>
-            <Button id='qwerty' textBtn='play-again' playAgain/>
+            <Button textBtn='play-again' playAgain/>
         </>}
         {gameLoose && <>
-            <div className={s.game__message}>GAME OVER!</div>
-            <Button id='qwerty' textBtn='start-again' playAgain/>
+                <div className={s.game__message}>GAME OVER!</div>
+                <Button textBtn='start-again' to="/" playAgain/>
         </>}
     </div>
     </>

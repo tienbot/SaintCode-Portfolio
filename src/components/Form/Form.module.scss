@@ -51,6 +51,10 @@
 //   }
 // }
 // }
+.wrapper{
+    width: 100%;
+}
+
 .form {
   display: flex;
   flex-direction: column;
@@ -107,4 +111,12 @@
     border: none;
     background-color: #FEA55F;
   }
+}
+
+@media ( max-width: 576px ){
+    .wrapper{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 38px;
+    }
 }

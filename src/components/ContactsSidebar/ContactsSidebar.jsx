@@ -8,6 +8,7 @@ import { DropdownLinks } from '../DropdownLinks/DropdownLinks'
 export const ContactsSidebar = () => {
   return (
     <div>  
+      <p className={s.mobileTitle}>_contact-me</p>
       <Toggle 
        dropdownContent={<DropdownContacts />}><label className={s.labelText}>contacts</label>
       </Toggle>

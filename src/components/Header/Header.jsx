@@ -35,7 +35,6 @@ export const Header = () => {
         <div className={s.wrapName}>
           <TextComponent text="micheal-weaver" />
         </div>
-         {/* add Zhazgul21, что то работает некорректно. Строки 39-41*/}
         <div onClick = {() => setNav(!nav)} className={s.burger_btn}>
           {nav ? <AiOutlineMenu size={22}/> : <AiOutlineClose size={22} />}
         </div>

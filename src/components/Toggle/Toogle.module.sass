@@ -3,9 +3,12 @@
     position: relative
     cursor: pointer
     padding: 10px
+    border-top: 1px solid #1e2d3d
     border-bottom: 1px solid #1e2d3d
     width:100%
     height: 44px
+    &:first-item
+        border-top: unset
 .check 
     opacity: 0
     position: absolute
@@ -45,8 +48,10 @@
 
 @media ( max-width: 576px )
     .containerStyle
-        margin-bottom: 38px
+        margin-bottom: 3px
         width: calc(100vw - 32px)
+    .containerStyle:last-child
+        margin-bottom: 38px
     .checkbox
         border-bottom: none
         width: 100%
