@@ -9,11 +9,14 @@ import { Projects } from "../../components/Projects/Projects";
 import { Contacts } from "../../Pages/Contacts/Contacts";
 import Info from "../../components/info/Info";
 import personalInfo from "../../components/info/personal_info";
+import {AiOutlineMenu, AiOutlineClose} from "react-icons/ai" //add Zhazgul21, что то работает некорректно
 
 export const Header = () => {
-  const infoRef = useRef(null);
-  const infoLinesArr = useState([]);
-  const [codeSnippetArr, setCodeSnippetArr] = useState([]);
+    const infoRef = useRef(null);
+    const infoLinesArr = useState([]);
+    const [codeSnippetArr, setCodeSnippetArr] = useState([]);
+    const [nav, setNav] = useState(true); //add Zhazgul21, что то работает некорректно
+
 
   useEffect(() => {
     fetch("https://api.github.com/repos/tienbot/SaintCode-Portfolio/contents")
@@ -32,6 +35,10 @@ export const Header = () => {
       <header className={s.header}>
         <div className={s.wrapName}>
           <TextComponent text="micheal-weaver" />
+        </div>
+         {/* add Zhazgul21, что то работает некорректно. Строки 39-41*/}
+        <div onClick = {() => setNav(!nav)} className={s.burger_btn}>
+          {nav ? <AiOutlineMenu size={22}/> : <AiOutlineClose size={22} />}
         </div>
         <nav className={s.nav}>
           <ul className={s.ul}>
@@ -52,19 +59,17 @@ export const Header = () => {
           </ul>
         </nav>
       </header>
-      {/* <Routes>
-        <Route exact path="/" component={PageHello} element={<PageHello />} />
-        <Route
-          path="/about"
-          component={About}
-          element={
-            <About codeSnippetArr={codeSnippetArr}>
-              <Info
-                infoRef={infoRef}
-                infoLinesArr={infoLinesArr}
-                description={personalInfo.description}
-                title={personalInfo.title}
-              />
+      <Routes>
+        <Route exact path="/" component={PageHello} element={<PageHello/>}/>
+        <Route path="/about" component={About} 
+            element={<About codeSnippetArr={codeSnippetArr}>
+                <Info
+                    infoRef={infoRef}
+                    infoLinesArr={infoLinesArr}
+                    description={personalInfo.description}
+                    title={personalInfo.title}
+                    content={personalInfo.content}
+                />
             </About>
           }
         />
