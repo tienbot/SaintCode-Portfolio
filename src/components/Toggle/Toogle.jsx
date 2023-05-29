@@ -1,15 +1,12 @@
 import React, { useState } from 'react';
 import s from "./Toogle.module.sass"
 
-export const Toggle = ({ arrowStyle, containerStyle, dropdownContent, children }) => {
+export const Toggle = ({ arrowStyle, dropdownContent, children }) => {
   const [isChecked, setIsChecked] = useState(false);
   const [isDropdownVisible, setIsDropdownVisible] = useState(false);
 
   const handleCheckboxChange = () => {
     setIsChecked(!isChecked);
-  };
-
-  const handleArrowClick = () => {
     setIsDropdownVisible(!isDropdownVisible);
   };
 
@@ -23,15 +20,10 @@ export const Toggle = ({ arrowStyle, containerStyle, dropdownContent, children }
           checked={isChecked}
           onChange={handleCheckboxChange}
         />
-        <span className={`${s.checkmark} ${arrowStyle}`} onClick={handleArrowClick}></span>
-      {children}
+        <span className={`${s.checkmark} ${arrowStyle}`}></span>
+        {children}
       </label>
-{/* 
-      {isDropdownVisible && (
-        <div className={s.dropdown}>
-          {dropdownContent}
-        </div>
-      )} */}
+
       <div className={`${s.dropdown} ${isDropdownVisible ? s.show : ''}`}>
       {dropdownContent}
     </div>
@@ -40,5 +32,3 @@ export const Toggle = ({ arrowStyle, containerStyle, dropdownContent, children }
 };
 
 export default Toggle;
-
-

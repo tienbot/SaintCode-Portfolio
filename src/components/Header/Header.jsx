@@ -62,6 +62,7 @@ export const Header = () => {
                     infoLinesArr={infoLinesArr}
                     description={personalInfo.description}
                     title={personalInfo.title}
+                    content={personalInfo.content}
                 />
             </About>
         }/>
