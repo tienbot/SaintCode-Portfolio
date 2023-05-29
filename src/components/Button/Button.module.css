@@ -3,13 +3,7 @@
 
 .button{
     padding: 10px 14px;
-
-    /* height: 38px; */
-
     height: auto;
-    /* width: 129px; */
-
-    
     border-radius: 8px;
     text-align: center;
     border: none;
@@ -17,7 +11,6 @@
     color: #fff;
     font-size: 14px;
     line-height: 18px;
-    font-family: 'Fira Code', sans-serif;
 }
 
 .button:hover{

@@ -37,6 +37,7 @@ export const Projects = () => {
   const handleButtonXClick = () => {
     setCheckedProjects([]); // Clear selected projects
     setButtonXVisible(false); // Hide ButtonX
+    
   };
 
   const filteredProjects = projects.filter((project) =>
@@ -45,6 +46,7 @@ export const Projects = () => {
   return (
     <main className={s.main}>
       <div className={s.wrapper}>
+        <p className={s.mobileTitle}>_projects</p>
         <Toggle dropdownContent={<Check setCheckedProjects={handleCheckedProjectsChange} setButtonXText={setButtonXText} setButtonXVisible={setButtonXVisible} />}>
           <label className={s.labelText}>projects</label>
         </Toggle>
