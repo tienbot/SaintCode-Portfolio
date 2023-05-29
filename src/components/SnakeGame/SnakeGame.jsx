@@ -216,7 +216,7 @@ function SnakeGame(){
   }
 
   const startGame = (event) => {
-    if (event.target.className.includes('startGame')){
+    if (event.target.textContent.includes('start game')){
         setGameStarted(true);
         event.target.style='display:none'
     } else if (event.target.textContent.includes('again')){
