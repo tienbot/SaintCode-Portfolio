@@ -67,12 +67,15 @@
   width: 100%;
   background: #011221;
 }
+/* .gist__bash {
+  background: #011221;
+} */
 .CodeSnippetBlock_contentclass {
   background: #011221;
   border-radius: 15px;
   padding: 20px 20px;
 }
-.gist {
+/* .gist {
   background: #011221;
   border-radius: 15px;
   padding: 20px 20px;
@@ -84,7 +87,7 @@
 }
 .gist-meta {
   display: none;
-}
+} */
 body .gist .highlight {
   background: #141414;
 }
