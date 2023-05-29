@@ -90,6 +90,7 @@
   display: inline-block;
   color: #607b96;
   margin-left: 38px;
+  margin-bottom: 25px;
 }
 .line__first {
   margin: 0 0 0 0;
@@ -101,8 +102,8 @@
 }
 .line__num {
   display: inline-flex;
-  justify-content: space-between;
-  width: 100px;
+  /* justify-content: space-between; */
+  width: 74px;
 }
 .line__elem {
   display: inline-block;

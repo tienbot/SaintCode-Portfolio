@@ -1,5 +1,5 @@
 import React from 'react';
-import xbutton from './ButtonXImg/Vector(5).png';
+import xbutton from './ButtonXImg/close.svg';
 import s from './ButtonX.module.sass';
 
 export const ButtonX = ({ children, onClick }) => {

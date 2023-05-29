@@ -37,53 +37,97 @@ export const Form = () => {
 
   return (
     <div className={s.wrapper}>
-        <div class="Projects_border__MGs97">
-                <div className={s.border}>
-                    <ButtonX onClick={handleButtonXClick}>contacts</ButtonX>
-                </div>
+        <div className={s.border}>
+            <ButtonX onClick={handleButtonXClick}>contacts</ButtonX>
         </div>
-        {/* <div className="formWrapper"></div> */}
-        <form className={s.form}>
-            <label className={s.label} htmlFor="fname">
-                <TextComponent text="_name:" />
-            </label>
-            <input
-                className={s.input}
-                type="text"
-                id="fname"
-                name="fname"
-                value={name}
-                onChange={handleNameChange}
-                onClick={handleNameClick}
-        />
+        <div className={s.formWrapper}>
+            <div className={s.leftContent}>
+                <form className={s.form}>
+                    <label className={s.label} htmlFor="fname">
+                        <TextComponent text="_name:" />
+                    </label>
+                    <input
+                        className={s.input}
+                        type="text"
+                        id="fname"
+                        name="fname"
+                        value={name}
+                        onChange={handleNameChange}
+                        onClick={handleNameClick}
+                    />
 
-        <label className={s.label} htmlFor="email">
-            <TextComponent text="_email:" />
-        </label>
-        <input
-            className={s.input}
-            type="email"
-            name="email"
-            id="email"
-            required
-            value={email}
-            onChange={handleEmailChange}
-        />
+                    <label className={s.label} htmlFor="email">
+                        <TextComponent text="_email:" />
+                    </label>
+                    <input
+                        className={s.input}
+                        type="email"
+                        name="email"
+                        id="email"
+                        required
+                        value={email}
+                        onChange={handleEmailChange}
+                    />
 
-        <label className={s.label} htmlFor="message">
-            <TextComponent text="_message:" />
-        </label>
-        <textarea
-            className={`${s.input} ${s.noResize}`}
-            rows="13"
-            cols="30"
-            name="comment"
-            id="message"
-            value={message}
-            onChange={handleMessageChange}
-        ></textarea>
-        <Button textBtn="submit-message" />
-        </form>
+                    <label className={s.label} htmlFor="message">
+                        <TextComponent text="_message:" />
+                    </label>
+                    <textarea
+                        className={`${s.input} ${s.noResize}`}
+                        rows="13"
+                        cols="30"
+                        name="comment"
+                        id="message"
+                        value={message}
+                        onChange={handleMessageChange}
+                    ></textarea>
+                    <Button textBtn="submit-message" />
+                </form>
+            </div>
+            <div className={s.rightContent}>
+                <form className={s.form}>
+                    <label className={s.label} htmlFor="fname">
+                        <TextComponent text="_name:" />
+                    </label>
+                    <input
+                        className={s.input}
+                        type="text"
+                        id="fname"
+                        name="fname"
+                        value={name}
+                        onChange={handleNameChange}
+                        onClick={handleNameClick}
+                    />
+
+                    <label className={s.label} htmlFor="email">
+                        <TextComponent text="_email:" />
+                    </label>
+                    <input
+                        className={s.input}
+                        type="email"
+                        name="email"
+                        id="email"
+                        required
+                        value={email}
+                        onChange={handleEmailChange}
+                    />
+
+                    <label className={s.label} htmlFor="message">
+                        <TextComponent text="_message:" />
+                    </label>
+                    <textarea
+                        className={`${s.input} ${s.noResize}`}
+                        rows="13"
+                        cols="30"
+                        name="comment"
+                        id="message"
+                        value={message}
+                        onChange={handleMessageChange}
+                    ></textarea>
+                    <Button textBtn="submit-message" />
+                </form>
+            </div>
+        </div>
     </div>
   );
 };
