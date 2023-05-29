@@ -66,14 +66,16 @@
 
 .card.show {
     opacity: 1;
-}
-.buttons{
+} 
+.buttons {
     display: flex;
     /* justify-content: space-between; */
-    gap:10px
+    gap: 10px;
+    white-space: nowrap;
 }
+
 @media (max-width: 720px) {
     .card__bottom {
-    padding: 24px 15px 32px 15px;
-}
+        padding: 24px 15px 32px 15px;
+    }
 }
