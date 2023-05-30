@@ -2,7 +2,7 @@
   width: 100%;
   max-height: 70vh;
   height: 100%;
-  /* padding: 18px 40px 0 40px; */
+  padding: 18px 40px 0 40px;
   overflow: auto;
   font-style: normal;
   font-weight: 450;
@@ -11,13 +11,13 @@
   color: #607b96;
 }
 .wrapper::-webkit-scrollbar {
-  width: 26px;
+  width: 18.5px;
 }
 .wrapper::-moz-scrollbar {
-  width: 26px;
+  width: 18.5px;
 }
 .wrapper::-ms-scrollbar {
-  width: 26px;
+  width: 18.5px;
 }
 .wrapper::-webkit-scrollbar-track {
   background-color: #f1f1f1;
@@ -36,12 +36,15 @@
 }
 .wrapper::-webkit-scrollbar-thumb {
   background-color: #607b96;
+  border-radius: 4px;
 }
 .wrapper::-moz-scrollbar-thumb {
   background-color: #607b96;
+  border-radius: 4px;
 }
 .wrapper::-ms-scrollbar-thumb {
   background-color: #607b96;
+  border-radius: 4px;
 }
 .wrapper::-webkit-scrollbar-thumb:hover {
   filter: brightness(150%);
