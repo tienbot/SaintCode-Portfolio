@@ -94,18 +94,52 @@ export const Form = () => {
             </div>
             <div className={s.rightContent}>
                 <div className={s.textWrapper}>
-                    <p>1&nbsp;&nbsp;&nbsp;<span className={s.pink}>const</span> <span className={s.blue}>button</span> <span className={s.pink}>=</span> <span className={s.blue}>document</span>.<span className={s.blue}>querySelector</span>(<span className={s.orange}>'#sendBtn'</span>);</p>
-                    <p>2&nbsp;&nbsp;&nbsp;</p>
-                    <p>3&nbsp;&nbsp;&nbsp;<span className={s.pink}>const</span> <span className={s.blue}>message</span> <span className={s.pink}>= </span>&#123;</p>
-                    <p>4&nbsp;&nbsp;&nbsp;<span className={s.blue}>&nbsp;name</span>:<span className={s.orange}>&nbsp;"{name}"</span>,</p>
-                    <p>5&nbsp;&nbsp;&nbsp;<span className={s.blue}>&nbsp;email</span>:<span className={s.orange}>&nbsp;"{email}"</span>,</p>
-                    <p>6&nbsp;&nbsp;&nbsp;<span className={s.blue}>&nbsp;message</span>:<span className={s.orange}>&nbsp;"{message}"</span>,</p>
-                    <p>7&nbsp;&nbsp;&nbsp;&nbsp;date:<span className={s.orange}>&nbsp;"{today}"</span></p>
-                    <p>8&nbsp;&nbsp;&nbsp;&#125;</p>
-                    <p>9&nbsp;&nbsp;&nbsp;</p>
-                    <p>10&nbsp;&nbsp;&nbsp;<span className={s.blue}>button</span>.<span className={s.blue}>addEventListener</span>(<span className={s.orange}>'click'</span>, () <span className={s.pink}>=&gt; </span>&#123;</p>
-                    <p>11&nbsp;&nbsp;&nbsp;<span className={s.blue}>&nbsp;form</span>.<span className={s.blue}>send</span>(<span className={s.blue}>message</span>);</p>
-                    <p>12&nbsp;&nbsp;&nbsp;&#125;)</p>
+                    <div className={s.row}>
+                        <div className={s.number}>1</div>
+                        <p><span className={s.pink}>const</span> <span className={s.blue}>button</span> <span className={s.pink}>=</span> <span className={s.blue}>document</span>.<span className={s.blue}>querySelector</span>(<span className={s.orange}>'#sendBtn'</span>);</p>
+                    </div>
+                    <div className={s.row}>
+                        <div className={s.number}>2</div>
+                    </div>
+                    <div className={s.row}>
+                        <div className={s.number}>3</div>
+                        <p><span className={s.pink}>const</span> <span className={s.blue}>message</span> <span className={s.pink}>= </span>&#123;</p>
+                    </div>
+                    <div className={s.row}>
+                        <div className={s.number}>4</div>
+                        <p><span className={s.blue}>&nbsp;name</span>:<span className={s.orange}>&nbsp;"{name}"</span>,</p>
+                    </div>
+                    <div className={s.row}>
+                        <div className={s.number}>5</div>
+                        <p><span className={s.blue}>&nbsp;email</span>:<span className={s.orange}>&nbsp;"{email}"</span>,</p>
+                    </div>
+                    <div className={s.row}>
+                        <div className={s.number}>6</div>
+                        <p><span className={s.blue}>&nbsp;message</span>:<span className={s.orange}>&nbsp;"{message}"</span>,</p>
+                    </div>
+                    <div className={s.row}>
+                        <div className={s.number}>7</div>
+                        <p>date:<span className={s.orange}>&nbsp;"{today}"</span></p>
+                    </div>
+                    <div className={s.row}>
+                        <div className={s.number}>8</div>
+                        <p>&#125;</p>
+                    </div>
+                    <div className={s.row}>
+                        <div className={s.number}>9</div>
+                    </div>
+                    <div className={s.row}>
+                        <div className={s.number}>10</div>
+                        <p><span className={s.blue}>button</span>.<span className={s.blue}>addEventListener</span>(<span className={s.orange}>'click'</span>, () <span className={s.pink}>=&gt; </span>&#123;</p>
+                    </div>
+                    <div className={s.row}>
+                        <div className={s.number}>11</div>
+                        <p><span className={s.blue}>&nbsp;form</span>.<span className={s.blue}>send</span>(<span className={s.blue}>message</span>);</p>
+                    </div>
+                    <div className={s.row}>
+                        <div className={s.number}>12</div>
+                        <p>&#125;)</p>
+                    </div>
                     {/* <FormCode/> */}
                 </div>
             </div>
