@@ -37,20 +37,20 @@
 
 .content {
   /* height: calc(100% - 40px); */
-  max-height: 70vh;
+  max-height: 73.5vh;
   height: 100%;
   overflow: auto;
   padding-top: 20px;
 }
 
 .content::-webkit-scrollbar {
-  width: 26px;
+  width: 18.5px;
 }
 .content::-moz-scrollbar {
-  width: 26px;
+  width: 18.5px;
 }
 .content::-ms-scrollbar {
-  width: 26px;
+  width: 18.5px;
 }
 .content::-webkit-scrollbar-track {
   background-color: #f1f1f1;
@@ -69,12 +69,15 @@
 }
 .content::-webkit-scrollbar-thumb {
   background-color: #607b96;
+  border-radius: 4px;
 }
 .content::-moz-scrollbar-thumb {
   background-color: #607b96;
+  border-radius: 4px;
 }
 .content::-ms-scrollbar-thumb {
   background-color: #607b96;
+  border-radius: 4px;
 }
 .content::-webkit-scrollbar-thumb:hover {
   filter: brightness(150%);
@@ -115,6 +118,7 @@
 .text {
   margin-left: 38px;
   color: #607b96;
+  line-height: 150%;
 }
 .line__last {
   margin: 0 5px 0 0;

@@ -73,14 +73,47 @@
 
 .leftContent{
     display: flex;
+    justify-content: center;
     border-right: 1px solid #1E2D3D;
-    width: 40%;
+    width: 50%;
+    padding: 0 27px;
     padding-top: 10vh;
 }
 
 .rightContent{
     display: flex;
+    align-items: center;
+    padding: 0 27px;
     padding-top: 10vh;
+    flex-direction: column;
+    width: 50%;
+
+}
+.rightContent p {
+    color: #607B96;
+}
+
+.row{
+    display: flex;
+}
+
+.number{
+    width: 22px;
+    color: #607B96;
+    text-align: end;
+    margin-right: 40px;
+}
+
+.pink{
+    color: #C98BDF;
+}
+
+.blue{
+    color: #5565E8;
+}
+
+.orange{
+    color: #FEA55F;
 }
 
 @media ( max-width: 576px ){

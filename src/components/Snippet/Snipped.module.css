@@ -1,5 +1,6 @@
 .wrapper {
   margin: 52px 0;
+  /* padding: 0 40px; */
 }
 .header {
   display: flex;
@@ -14,6 +15,7 @@
   width: 36px;
   height: 36px;
   border-radius: 50%;
+  margin-right: 10px;
 }
 .title {
   width: 150px;
@@ -44,11 +46,31 @@
 }
 .content {
   width: 100%;
-  /* background: #011221; */
-  /* border: 1px solid #1e2d3d;
-  border-radius: 15px;
-  padding: 12px 15px; */
 }
+
+.content table tbody{
+    background-color: #011221;
+}
+/* вмето .blob-code */
+.content table tbody :last-child{
+    color: #607b96;
+}
+
+/* вмето .gist-file */
+.content section [translate]{
+    border: 1px solid #1E2D3D;
+}
+
+/* вмето .gist-data */
+.content section [translate] > :first-child{
+    border-bottom: 1px solid #1E2D3D;
+}
+
+/* вмето .gist-meta */
+.content section [translate] :last-child{
+    background-color: #011221;
+}
+
 .description {
   display: flex;
   /* max-width: 70%; */
@@ -58,6 +80,4 @@
   justify-content: space-between;
   padding: 17px 0 12px 0;
   border-top: 1px solid #1e2d3d;
-}
-.close__btn {
 }
