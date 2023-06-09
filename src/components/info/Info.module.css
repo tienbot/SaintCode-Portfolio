@@ -6,7 +6,7 @@
 }
 .upper {
   height: 40px;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   color: #607b96;
   border-bottom: 1px solid #1e2d3d;
 }
@@ -40,7 +40,9 @@
   max-height: 70vh;
   height: 100%;
   overflow: auto;
+  padding-top: 20px;
 }
+
 .content::-webkit-scrollbar {
   width: 26px;
 }
@@ -90,6 +92,7 @@
   display: inline-block;
   color: #607b96;
   margin-left: 38px;
+  margin-bottom: 25px;
 }
 .line__first {
   margin: 0 0 0 0;
@@ -101,8 +104,8 @@
 }
 .line__num {
   display: inline-flex;
-  justify-content: space-between;
-  width: 100px;
+  /* justify-content: space-between; */
+  width: 74px;
 }
 .line__elem {
   display: inline-block;

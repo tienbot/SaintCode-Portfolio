@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import Toggle from '../Toggle/Toogle';
-import { Check } from '../Check/Check';
+import Toggle from '../../components/Toggle/Toogle';
+import { Check } from '../../components/Check/Check';
 import s from './Projects.module.sass';
-import { Card } from '../Card/Card';
-import { ButtonX } from '../ButtonX/ButtonX';
+import { Card } from '../../components/Card/Card';
+import { ButtonX } from '../../components/ButtonX/ButtonX';
 
 export const Projects = () => {
   const [projects, setProjects] = useState([]);
@@ -72,5 +72,4 @@ export const Projects = () => {
     </div>
     </main>
   );
-
 };

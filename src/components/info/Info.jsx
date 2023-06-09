@@ -21,7 +21,7 @@ const Info = ({ title, description, content, infoRef, infoLinesArr }) => {
         </p>
         <p className={s.text}>
           <span className={s.line__first}></span>
-          <span className={s.line__second}>2</span>&nbsp;&nbsp;&nbsp;*&nbsp;
+          <span className={s.line__elem}>2</span>&nbsp;&nbsp;&nbsp;*&nbsp;
           {description}
         </p>
         {infoLinesArr.map((line, index) => {
@@ -31,7 +31,7 @@ const Info = ({ title, description, content, infoRef, infoLinesArr }) => {
               <span className={s.line__num}>
                 <span className={s.line__elem}> {index + 3} </span>
 
-                <span className={s.line__elem}>*&nbsp;</span>
+                <span className={s.line__elem}>&nbsp;&nbsp;&nbsp;*</span>
               </span>
               {line}
             </p>

@@ -1,5 +1,11 @@
 .wrap {
   padding-top: 1rem;
-  padding-left: 0.5rem;
+  padding-left: 22px;
   font-size:1rem;
+}
+
+@media ( max-width: 576px ){
+    .wrap{
+        padding-left: 27px;
+    }
 }

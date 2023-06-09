@@ -1,9 +1,23 @@
 .wrapSection {
-  display:flex;
+    display:flex;
+    max-width: 1782px;
+    height: 100%;
 }
 
 .wrapSidebar {
   max-width:19.4rem;
   width:100%;
   font-size:1rem;
+  border-right: 1px solid #1e2d3d;
+}
+
+@media ( max-width: 576px ){
+    .wrapSection { 
+        flex-direction: column;
+        overflow: auto;
+    }
+
+    .wrapSidebar {
+        border-right: none;
+    }
 }
