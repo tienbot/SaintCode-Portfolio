@@ -19,46 +19,48 @@ const About = ({ codeSnippetArr, children }) => {
 
   return (
     <div className={style.main}>
-      <div className={style.sidebar}></div>
-      <div className={style.menu__wrapper}>
-        <div className={style.toggleTwo}>
-          <Toggle
-            dropdownContent={
-              <>
-                <ToggleTwo>
-                  <label className={style.labelText}>
-                    <img className={style.imgBio} src={bio} alt="Bio" />
-                    bio
-                  </label>
-                </ToggleTwo>
-                <ToggleTwo>
-                  <label className={style.labelText}>
-                    <img className={style.imgInfo} src={int} alt="Interests" />
-                    interests
-                  </label>
-                </ToggleTwo>
-                <ToggleTwo dropdownContent>
-                  <label className={style.labelText}>
-                    <img className={style.imgInfo} src={edu} alt="Education" />
-                    education
-                  </label>
-                </ToggleTwo>
-               
-              </>
-            }
-          >
-            <span className={style.spanText}>personal-info</span>
-          </Toggle>
+        <div className={style.wrapper}>
+            <p className={style.mobileTitle}>_about-me</p>
+            <div className={style.sidebar}></div>
+            <div className={style.menu__wrapper}>
+                <div className={style.toggleTwo}>
+                    <Toggle
+                        dropdownContent={<>
+                            <ToggleTwo>
+                            <label className={style.labelText}>
+                                <img className={style.imgBio} src={bio} alt="Bio" />
+                                bio
+                            </label>
+                            </ToggleTwo>
+                            <ToggleTwo>
+                            <label className={style.labelText}>
+                                <img className={style.imgInfo} src={int} alt="Interests" />
+                                interests
+                            </label>
+                            </ToggleTwo>
+                            <ToggleTwo dropdownContent>
+                            <label className={style.labelText}>
+                                <img className={style.imgInfo} src={edu} alt="Education" />
+                                education
+                            </label>
+                            </ToggleTwo>
+                        </>}
+                    >
+                        <span className={style.spanText}>personal-info</span>
+                    </Toggle>
+                    <Toggle dropdownContent={<DropdownContacts />}>
+                        <span className={style.spanText}>contacts</span>
+                    </Toggle>
+                </div>
+            </div>
         </div>
-        <Toggle dropdownContent={<DropdownContacts />}>
-          <span className={style.spanText}>contacts</span>
-        </Toggle>
-      </div>
-      <div className={style.left__content_wrapper}>{children}</div>
-      <div className={style.right__content_wrapper}>
-        <div className={style.content__title}></div>
-        <CodeSnippedBlock codeSnippetArr={codeSnippetArr} />
-      </div>
+        <div className={style.content}>
+            <div className={style.left__content_wrapper}>{children}</div>
+            <div className={style.right__content_wrapper}>
+                <div className={style.content__title}></div>
+                <CodeSnippedBlock codeSnippetArr={codeSnippetArr} />
+            </div>
+        </div>
     </div>
   );
 };

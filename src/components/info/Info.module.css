@@ -41,6 +41,8 @@
   height: 100%;
   overflow: auto;
   padding-top: 20px;
+  width: 100%;
+  max-width: 690px;
 }
 
 .content::-webkit-scrollbar {
@@ -125,4 +127,26 @@
   display: inline-block;
   width: 25px;
   text-align: right;
+}
+
+@media ( max-width: 576px ){
+    .title {
+        border-right: none;
+    }
+    .content{
+        /* height: unset; */
+        max-height: unset;
+    }
+    .text{
+        margin-left: 27px;
+    }
+    .p{
+        margin-left: 27px;
+    }
+    /* .line__elem{
+        display: none;
+    }
+    .line__num{
+        display: none;
+    } */
 }

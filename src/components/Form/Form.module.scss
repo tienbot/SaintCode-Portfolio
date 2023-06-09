@@ -116,6 +116,33 @@
     color: #FEA55F;
 }
 
+.thanks{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 372px;
+    height: 372px;
+    
+}
+
+.thanksTitle{
+    color:#fff;
+    font-weight: 450;
+    font-size: 26px;
+    line-height: 34px;
+    margin-bottom: 10px;
+}
+
+.thanksP{
+    color: #607B96;
+    text-align: center;
+}
+
+.thanks button{
+    margin-top: 37px;
+}
+
 @media ( max-width: 576px ){
     .formWrapper{
         display: flex;
