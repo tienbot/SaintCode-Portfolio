@@ -1,6 +1,6 @@
 import React from 'react'
 import Toggle from '../Toggle/Toogle'
-import s from '../Projects/Projects.module.sass'
+import s from '../../Pages/Projects/Projects.module.sass'
 import { DropdownContacts } from '../DropdownContacts/DropdownContacts'
 import { DropdownLinks } from '../DropdownLinks/DropdownLinks'
 

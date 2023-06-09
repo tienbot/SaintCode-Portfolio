@@ -5,7 +5,7 @@ import HeaderText from "../HeaderText/HeaderText";
 import TextComponent from "../TextComponent/TextComponent";
 import { PageHello } from "../../Pages/PageHello/PageHello";
 import About from "../../Pages/About/About";
-import { Projects } from "../Projects/Projects";
+import { Projects } from "..//../Pages/Projects/Projects";
 import { Contacts } from "../../Pages/Contacts/Contacts";
 import Info from "../info/Info";
 import personalInfo from "../info/personal_info";
@@ -27,7 +27,6 @@ export const Header = () => {
     useEffect(() => {
       if (infoRef.current) {
         let infoBoxWidth = infoRef.current.getBoundingClientRect().width;
-        console.log(infoBoxWidth)
   
         // Width for one letter
         let signWidth = 16;
@@ -40,7 +39,7 @@ export const Header = () => {
         for (let i = 0; i < words.length; i++) {
           let word = words[i];
           let wordWidth = word.length * signWidth;
-          if (currentWidth + wordWidth <= infoBoxWidth) {
+          if (currentWidth + wordWidth <= infoBoxWidth - 140) {
             currentLine += word += " ";
             currentWidth += wordWidth + signWidth;
           } else {
