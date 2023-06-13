@@ -55,11 +55,46 @@ a[class='HeaderText_HeaderText__LzOpA active']{
     margin-bottom:-3px;
 }
 
-// начало добавленного кода от Zhazgul21
 .burger_btn{
   display: none;
   color: #607B96;
+  transition: ease 0.1s;
+  &:hover{
+    cursor: pointer;
+    color: #fff;
+  }
 }
+
+.ulMobile {
+    display: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    position: absolute;
+    z-index: 100;
+    width: calc(100% - 32px);
+    height: calc(100% - 141px);
+    background: #011627;
+    li {
+        border-bottom: solid 1px #1E2D3D;
+        &:first-child{
+            border-top: solid 1px #1E2D3D;
+        }
+        &:last-of-type {
+            border-left: none;
+        }
+    }
+    a {
+        width: 100%;
+        color:#fff;
+    }
+    a[class="HeaderText_HeaderText__LzOpA active"]{
+        color:#fff;
+        border-bottom: 3px solid #FEA55F;
+    }
+}
+
 @media (max-width: 960px) {
   .burger_btn{
     display: block;
@@ -70,13 +105,19 @@ a[class='HeaderText_HeaderText__LzOpA active']{
   .nav{
     display: none;
   }
+  .navActive{
+    display: flex;
+    flex-direction: column;
+  }
+  .navActive .ulMobile{
+    display: flex;
+  }
   .header
     .wrapName{
       border: none;
     }
 
 }
-//конец добавленного кода от Zhazgul21
 
 
 @media screen and (max-width: 540px) {
