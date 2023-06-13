@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import style from './About.module.css';
 import CodeSnippedBlock from '../../components/CodeSnipedBlock/CodeSnippedBlock';
 import Toggle from '../../components/Toggle/Toogle';
@@ -36,7 +36,10 @@ const About = ({ codeSnippetArr, children }) => {
     setShowButtonX(false);
     setActiveToggleName('');
   };
-
+   const memoizedCodeSnippedBlock = useMemo(
+    () => <CodeSnippedBlock codeSnippetArr={codeSnippetArr} />,
+    [codeSnippetArr]
+);
   return (
     <div className={style.main}>
       <div className={style.sidebar}>
@@ -182,11 +185,10 @@ const About = ({ codeSnippetArr, children }) => {
       </div>
       <div className={style.right__content_wrapper}>
         <div className={style.content__title}></div>
-        <CodeSnippedBlock codeSnippetArr={codeSnippetArr} />
+        {memoizedCodeSnippedBlock}
       </div>
     </div>
   );
 };
 
 export default About;
-

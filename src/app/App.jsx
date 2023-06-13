@@ -52,8 +52,8 @@ function App() {
       .then((response) => response.json())
       .then((data) => {
         setCodeSnippetArr(data);
-        console.log(data);
-        console.log(codeSnippetArr);
+        // console.log(data);
+        // console.log(codeSnippetArr);
       })
       .catch((error) => {
         console.error(error);
