@@ -29,11 +29,10 @@ const Snippet = ({ elem, children }) => {
         </div>
       </div>
       <div className={s.content}>{children}</div>
-      <div className={s.description}>
+      {/* <div className={s.description}>
         <p className={s.text}></p>
         <button className={s.close__btn}></button>
-      </div>{" "}
-      */
+      </div>{" "} */}
     </div>
   );
 };

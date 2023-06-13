@@ -333,15 +333,6 @@ const About = ({ codeSnippetArr, children }) => {
             <span className={style.spanText}>hobbies</span>
           </Toggle>
         </div>
-        <Toggle dropdownContent={<DropdownContacts />}>
-          <span className={style.spanText}>contacts</span>
-        </Toggle>
-      </div>
-      <div className={style.left__content_wrapper}>{children}</div>
-      <div className={style.right__content_wrapper}>
-        <div className={style.content__title}></div>
-        <CodeSnippedBlock codeSnippetArr={codeSnippetArr} />
-      </div>
     </div>
   );
 };

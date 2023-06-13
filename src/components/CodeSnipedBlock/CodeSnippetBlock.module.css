@@ -261,3 +261,10 @@ body .gist .pl-mdh,
 body .gist .pl-mdi {
   background: #141414;
 }
+
+@media ( max-width: 576px ){
+    .wrapper{
+        padding: 18px 27px 0 27px;
+        overflow: unset;
+    }
+}
