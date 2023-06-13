@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import style from './About.module.css';
 import CodeSnippedBlock from '../../components/CodeSnipedBlock/CodeSnippedBlock';
 import Toggle from '../../components/Toggle/Toogle';
@@ -23,7 +23,7 @@ const About = ({ codeSnippetArr, children }) => {
     }
   };
 
-  console.log(codeSnippetArr);
+//   console.log(codeSnippetArr);
 
   // Define a variable to hold the content for the left section based on the active toggle
 let leftContent = null;
@@ -60,9 +60,14 @@ switch (activeToggle) {
     break;
 }
 
+const memoizedCodeSnippedBlock = useMemo(
+    () => <CodeSnippedBlock codeSnippetArr={codeSnippetArr} />,
+    [codeSnippetArr]
+  );
+
   return (
     <div className={style.main}>
-     <p className={style.mobileTitle}>_about-me</p>
+      <p className={style.mobileTitle}>_about-me</p>
       <div className={style.sidebar}>
         <img className={`${style.imgOne} ${activeToggle === 'profesional-info' ? style.active : ''}`} src={profesional} alt='profesional-info'/>
         <img className={`${style.imgTwo} ${activeToggle === 'personal-info' ? style.active : ''}`} src={personal} alt='personal-info'/>
@@ -201,7 +206,7 @@ switch (activeToggle) {
       <div className={style.left__content_wrapper}>{leftContent}</div>
       <div className={style.right__content_wrapper}>
         <div className={style.content__title}></div>
-        <CodeSnippedBlock codeSnippetArr={codeSnippetArr} />
+        {memoizedCodeSnippedBlock}
       </div>
     </div>
   );
