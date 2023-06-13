@@ -9,6 +9,7 @@ export const Form = () => {
   const [name, setName] = useState('Jonathan Davis');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [submitted, setSubmitted] = useState(false);
   const [checkedProjects, setCheckedProjects] = useState([]);
   const [buttonXVisible, setButtonXVisible] = useState(false);
   const [buttonXText, setButtonXText] = useState('');
@@ -35,13 +36,30 @@ export const Form = () => {
     setCheckedProjects([]); // Clear selected projects
     setButtonXVisible(false); // Hide ButtonX
   };
+  
   const options = { weekday: 'short', day: 'numeric', month: 'short' };
   const today = new Date().toLocaleDateString('en-US', options);
 //   const [inputValue, setInputValue] = useState('');
 
-//   const handleChange = (event) => {
-//     setInputValue(event.target.value);
-//   };
+  const handleChange = (event) => {
+    const formData = new FormData(event.target);
+    const formDataObj = Object.fromEntries(formData.entries());
+
+    event.preventDefault();
+    setSubmitted(true);
+    console.log('Имя:', formDataObj.fname);
+    console.log('Email:', formDataObj.email);
+    console.log('Сообщение:', formDataObj.comment);
+  };
+
+  const sendAgain = () => {
+    console.log('again')
+    setSubmitted(false);
+    setName('');
+    setEmail('');
+    setMessage('');
+  }
+
 
   return (
     <div className={s.wrapper}>
@@ -50,47 +68,58 @@ export const Form = () => {
         </div>
         <div className={s.formWrapper}>
             <div className={s.leftContent}>
-                <form className={s.form}>
-                    <label className={s.label} htmlFor="fname">
-                        <TextComponent text="_name:" />
-                    </label>
-                    <input
-                        className={s.input}
-                        type="text"
-                        id="fname"
-                        name="fname"
-                        value={name}
-                        onChange={handleNameChange}
-                        onClick={handleNameClick}
-                    />
+                {submitted ? (
+                    <div className={s.thanks}>
+                        <p className={s.thanksTitle}>Thank you! 🤘</p>
+                        <p className={s.thanksP}>Your message has been accepted. You will recieve answer really soon!</p>
+                        {/* <button onClick={sendAgain}>send-new-message</button> */}
+                        <div onClick={sendAgain}>
+                            <Button id='formSend2' onClick={sendAgain} textBtn="send-new-message" />
+                        </div>
+                    </div>
+                ) : (
+                    <form className={s.form} onSubmit={handleChange}>
+                        <label className={s.label} htmlFor="fname">
+                            <TextComponent text="_name:" />
+                        </label>
+                        <input
+                            className={s.input}
+                            type="text"
+                            id="fname"
+                            name="fname"
+                            value={name}
+                            onChange={handleNameChange}
+                            onClick={handleNameClick}
+                        />
 
-                    <label className={s.label} htmlFor="email">
-                        <TextComponent text="_email:" />
-                    </label>
-                    <input
-                        className={s.input}
-                        type="email"
-                        name="email"
-                        id="email"
-                        required
-                        value={email}
-                        onChange={handleEmailChange}
-                    />
+                        <label className={s.label} htmlFor="email">
+                            <TextComponent text="_email:" />
+                        </label>
+                        <input
+                            className={s.input}
+                            type="email"
+                            name="email"
+                            id="email"
+                            required
+                            value={email}
+                            onChange={handleEmailChange}
+                        />
 
-                    <label className={s.label} htmlFor="message">
-                        <TextComponent text="_message:" />
-                    </label>
-                    <textarea
-                        className={`${s.input} ${s.noResize}`}
-                        rows="13"
-                        cols="30"
-                        name="comment"
-                        id="message"
-                        value={message}
-                        onChange={handleMessageChange}
-                    ></textarea>
-                    <Button textBtn="submit-message" />
-                </form>
+                        <label className={s.label} htmlFor="message">
+                            <TextComponent text="_message:" />
+                        </label>
+                        <textarea
+                            className={`${s.input} ${s.noResize}`}
+                            rows="13"
+                            cols="30"
+                            name="comment"
+                            id="message"
+                            value={message}
+                            onChange={handleMessageChange}
+                        ></textarea>
+                        <Button id='formSend' textBtn="submit-message" />
+                    </form>
+                )}
             </div>
             <div className={s.rightContent}>
                 <div className={s.textWrapper}>
