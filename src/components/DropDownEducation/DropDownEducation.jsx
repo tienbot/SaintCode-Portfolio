@@ -3,8 +3,8 @@ import s from "..//DropDownEducation/DropDownEducation.module.sass"
 export  const DropDownEducation = () => {
   return (
       <ul className={s.ul}>
-          <li><img src={img} className={s.img} /> high school </li>
-          <li><img src={img}/> university</li>
+          <li><img src={img} className={s.img} alt='high school'/> high school </li>
+          <li><img src={img} alt='university'/> university</li>
       </ul>
   )
 }
