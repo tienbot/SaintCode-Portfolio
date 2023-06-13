@@ -6,9 +6,14 @@
   height: 100%;
 }
 .sidebar {
-  width: 67px;
+  /* width: 67px; */
+  display: flex;
+  flex-direction:column;
+  align-items:center;
+  gap:38px;
   height: 100%;
   border-right: 1px solid #1e2d3d;
+
 }
 .menu__wrapper {
   width: 243px;
@@ -24,6 +29,7 @@
   border-right: 1px solid #1e2d3d;
   /* overflow: scroll; */
 }
+
 .mobileTitle {
     display: none;
     color:#fff;
@@ -103,6 +109,9 @@
   line-height: 21px;
   color: #607B96;;
 }
+.labelText.active {
+  color: white;
+}
 .spanText{
   font-family: Fira Code;
   font-size: 16px;
@@ -127,45 +136,34 @@
     display: flex;
     width: 100%;
 }
-/* .right__content_wrapper::-webkit-scrollbar {
-  width: 26px;
+.active {
+  color: white;
 }
-.right__content_wrapper::-moz-scrollbar {
-  width: 26px;
+.imgOne{
+  margin-top:20px;
+  height: 18px;
+  width: 20px;
+  color: #607B96;
 }
-.right__content_wrapper::-ms-scrollbar {
-  width: 26px;
+/* .imgOne.active {
+  background: #1E2D3D;
+} */
+.imgTwo {
+  height: 16px;
+  width: 20px;
+  color: #607B96;
 }
-.right__content_wrapper::-webkit-scrollbar-track {
-  background-color: #f1f1f1;
-  background: #011627;
-  border: 1px solid #1e2d3d;
+.imgThree {
+  height: 22px;
+  width: 16px;
+  color: #607B96;
 }
-.right__content_wrapper::-moz-scrollbar-track {
-  background-color: #f1f1f1;
-  background: #011627;
-  border: 1px solid #1e2d3d;
+.imgOne.active,
+.imgTwo.active,
+.imgThree.active {
+color: white;
 }
-.right__content_wrapper::-ms-scrollbar-track {
-  background-color: #f1f1f1;
-  background: #011627;
-  border: 1px solid #1e2d3d;
-}
-.right__content_wrapper::-webkit-scrollbar-thumb {
-  background-color: #607b96;
-}
-.right__content_wrapper::-moz-scrollbar-thumb {
-  background-color: #607b96;
-}
-.right__content_wrapper::-ms-scrollbar-thumb {
-  background-color: #607b96;
-}
-.right__content_wrapper::-webkit-scrollbar-thumb:hover {
-  filter: brightness(150%);
-}
-.right__content_wrapper::-moz-scrollbar-thumb:hover {
-  filter: brightness(150%);
-}
+
 .right__content_wrapper::-ms-scrollbar-thumb:hover {
   filter: brightness(150%);
 } */
