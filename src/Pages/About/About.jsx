@@ -8,82 +8,56 @@ import int from '../../components/ToggleTwo/ToogleTwoImg/int.svg';
 import edu from '../../components/ToggleTwo/ToogleTwoImg/edu.svg';
 import profesional from "../About/AboutImg/profesional.svg";
 import personal from "../About/AboutImg/personal.svg"
-import hobby from '../About/AboutImg/hobby.svg'
+import hobby from '../About/AboutImg/hobby.svg';
 import { DropdownContacts } from '../../components/DropdownContacts/DropdownContacts';
 import DropDownEducation from '../../components/DropDownEducation/DropDownEducation';
+import AboutInfoContent from '../../components/AboutLeftInfo/AboutInfoContent';
+import { ButtonX } from "../../components/ButtonX/ButtonX.jsx"
 
 const About = ({ codeSnippetArr, children }) => {
   const [activeToggle, setActiveToggle] = useState('');
-
-  const handleToggleTwoClick = (toggleName) => {
+  const [showButtonX, setShowButtonX] = useState(false);
+  const [activeToggleName, setActiveToggleName] = useState('');
+  
+  const handleToggleClick = (toggleName, toggleComponent) => {
     if (activeToggle === toggleName) {
       setActiveToggle('');
+      setShowButtonX(false);
+      setActiveToggleName('');
     } else {
       setActiveToggle(toggleName);
+      setShowButtonX(true);
+      setActiveToggleName(toggleComponent);
     }
   };
 
-//   console.log(codeSnippetArr);
-
-  // Define a variable to hold the content for the left section based on the active toggle
-let leftContent = null;
-
-switch (activeToggle) {
-  case 'Experiance':
-    leftContent = <div>Experience content</div>;
-    break;
-  case 'Skills':
-    leftContent = <div>Skills content</div>;
-    break;
-  case 'Certificates':
-    leftContent = <div>Certificates content</div>;
-    break;
-  case 'bio':
-    leftContent = <div>Bio content</div>;
-    break;
-  case 'interests':
-    leftContent = <div>Interests content</div>;
-    break;
-  case 'education':
-    leftContent = <div>Education content</div>;
-    break;
-  case 'Music':
-    leftContent = <div>Music content</div>;
-    break;
-  case 'Hiking':
-    leftContent = <div>Hiking content</div>;
-    break;
-  case 'Books':
-    leftContent = <div>Books content</div>;
-    break;
-  default:
-    break;
-}
-
-const memoizedCodeSnippedBlock = useMemo(
+  const handleButtonXClick = () => {
+    setActiveToggle('');
+    setShowButtonX(false);
+    setActiveToggleName('');
+  };
+   const memoizedCodeSnippedBlock = useMemo(
     () => <CodeSnippedBlock codeSnippetArr={codeSnippetArr} />,
     [codeSnippetArr]
-  );
-
+);
   return (
     <div className={style.main}>
-      <p className={style.mobileTitle}>_about-me</p>
       <div className={style.sidebar}>
-        <img className={`${style.imgOne} ${activeToggle === 'profesional-info' ? style.active : ''}`} src={profesional} alt='profesional-info'/>
-        <img className={`${style.imgTwo} ${activeToggle === 'personal-info' ? style.active : ''}`} src={personal} alt='personal-info'/>
-        <img className={`${style.imgThree} ${activeToggle === 'hobbies' ? style.active : ''}`} src={hobby} alt='hobbies'/>
+        <img className={`${style.imgOne} ${activeToggle === 'profesional-info' ? style.active : ''}`} src={profesional} alt="Professional" />
+        <img className={`${style.imgTwo} ${activeToggle === 'personal-info' ? style.active : ''}`} src={personal} alt="Personal" />
+        <img className={`${style.imgThree} ${activeToggle === 'hobbies' ? style.active : ''}`} src={hobby} alt="Hobbies" />
       </div>
       <div className={style.menu__wrapper}>
         <div className={style.toggleTwo}>
           <Toggle
-            dropdownContent={
+           dropdownContent={
               <>
                 <ToggleTwo>
                   <label
                     className={`${style.labelText} ${
                       activeToggle === 'Experiance' ? style.active : ''
                     }`}
-                    onClick={() => handleToggleTwoClick('Experiance')}
+                    onClick={() => handleToggleClick('Experiance', 'profesional-info')}
                   >
                     <img className={style.imgBio} src={bio} alt="Experiance" />
                     experiance
@@ -94,7 +68,7 @@ const memoizedCodeSnippedBlock = useMemo(
                     className={`${style.labelText} ${
                       activeToggle === 'Skills' ? style.active : ''
                     }`}
-                    onClick={() => handleToggleTwoClick('Skills')}
+                    onClick={() => handleToggleClick('Skills', 'profesional-info')}
                   >
                     <img className={style.imgInfo} src={int} alt="Skills" />
                     skills
@@ -105,7 +79,7 @@ const memoizedCodeSnippedBlock = useMemo(
                     className={`${style.labelText} ${
                       activeToggle === 'Certificates' ? style.active : ''
                     }`}
-                    onClick={() => handleToggleTwoClick('Certificates')}
+                    onClick={() => handleToggleClick('Certificates', 'profesional-info')}
                   >
                     <img className={style.imgInfo} src={edu} alt="Certificates" />
                     certificates
@@ -117,14 +91,14 @@ const memoizedCodeSnippedBlock = useMemo(
             <span className={style.spanText}>profesional-info</span>
           </Toggle>
           <Toggle
-            dropdownContent={
+           dropdownContent={
               <>
                 <ToggleTwo>
                   <label
                     className={`${style.labelText} ${
                       activeToggle === 'bio' ? style.active : ''
                     }`}
-                    onClick={() => handleToggleTwoClick('bio')}
+                    onClick={() => handleToggleClick('bio', 'personal-info')}
                   >
                     <img className={style.imgBio} src={bio} alt="Bio" />
                     bio
@@ -135,7 +109,7 @@ const memoizedCodeSnippedBlock = useMemo(
                     className={`${style.labelText} ${
                       activeToggle === 'interests' ? style.active : ''
                     }`}
-                    onClick={() => handleToggleTwoClick('interests')}
+                    onClick={() => handleToggleClick('interests', 'personal-info')}
                   >
                     <img className={style.imgInfo} src={int} alt="Interests" />
                     interests
@@ -146,7 +120,7 @@ const memoizedCodeSnippedBlock = useMemo(
                     className={`${style.labelText} ${
                       activeToggle === 'education' ? style.active : ''
                     }`}
-                    onClick={() => handleToggleTwoClick('education')}
+                    onClick={() => handleToggleClick('education', 'personal-info')}
                   >
                     <img className={style.imgInfo} src={edu} alt="Education" />
                     education
@@ -158,14 +132,14 @@ const memoizedCodeSnippedBlock = useMemo(
             <span className={style.spanText}>personal-info</span>
           </Toggle>
           <Toggle
-            dropdownContent={
+           dropdownContent={
               <>
                 <ToggleTwo>
                   <label
                     className={`${style.labelText} ${
                       activeToggle === 'Music' ? style.active : ''
                     }`}
-                    onClick={() => handleToggleTwoClick('Music')}
+                    onClick={() => handleToggleClick('Music', 'hobbies')}
                   >
                     <img className={style.imgBio} src={bio} alt="Music" />
                     music
@@ -176,7 +150,7 @@ const memoizedCodeSnippedBlock = useMemo(
                     className={`${style.labelText} ${
                       activeToggle === 'Hiking' ? style.active : ''
                     }`}
-                    onClick={() => handleToggleTwoClick('Hiking')}
+                    onClick={() => handleToggleClick('Hiking', 'hobbies')}
                   >
                     <img className={style.imgInfo} src={int} alt="Hiking" />
                     hiking
@@ -187,7 +161,7 @@ const memoizedCodeSnippedBlock = useMemo(
                     className={`${style.labelText} ${
                       activeToggle === 'Books' ? style.active : ''
                     }`}
-                    onClick={() => handleToggleTwoClick('Books')}
+                    onClick={() => handleToggleClick('Books', 'hobbies')}
                   >
                     <img className={style.imgInfo} src={edu} alt="Books" />
                     Books
@@ -198,12 +172,17 @@ const memoizedCodeSnippedBlock = useMemo(
           >
             <span className={style.spanText}>hobbies</span>
           </Toggle>
-          <Toggle dropdownContent={<DropdownContacts />}>
-            <span className={style.spanText}>contacts</span>
-          </Toggle>
         </div>
+        <Toggle
+         dropdownContent={<DropdownContacts />}
+        >
+          <span className={style.spanText}>contacts</span>
+        </Toggle>
       </div>
-      <div className={style.left__content_wrapper}>{leftContent}</div>
+      <div className={style.left__content_wrapper}>
+        {showButtonX && <ButtonX onClick={handleButtonXClick}>{activeToggleName}</ButtonX>}
+        <AboutInfoContent activeToggle={activeToggle} />
+      </div>
       <div className={style.right__content_wrapper}>
         <div className={style.content__title}></div>
         {memoizedCodeSnippedBlock}
