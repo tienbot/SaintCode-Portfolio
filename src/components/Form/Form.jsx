@@ -12,7 +12,7 @@ export const Form = () => {
   const [submitted, setSubmitted] = useState(false);
   const [checkedProjects, setCheckedProjects] = useState([]);
   const [buttonXVisible, setButtonXVisible] = useState(false);
-  const [buttonXText, setButtonXText] = useState('');
+//   const [buttonXText, setButtonXText] = useState('');
 
   const handleNameChange = (e) => {
     setName(e.target.value);
@@ -44,6 +44,20 @@ export const Form = () => {
   const handleChange = (event) => {
     const formData = new FormData(event.target);
     const formDataObj = Object.fromEntries(formData.entries());
+
+     //Дополнительные действия, например, отправка данных на сервер
+    fetch('/api/submit', {
+      method: 'POST',
+      body: JSON.stringify({ name: name.value, email: email.value }),
+      headers: { 'Content-Type': 'application/json' },
+    })
+      .then(response => response.json())
+      .then(data => {
+        // Обработка ответа от сервера
+      })
+      .catch(error => {
+        // Обработка ошибок
+      });
 
     event.preventDefault();
     setSubmitted(true);
